@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062019" />
+      <stop offset="100%" stop-color="#0f3d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e8be" />
+      <stop offset="100%" stop-color="#d4af37" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Luxury Forest Green Rounded Background -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#badgeGrad)" stroke="#d4af37" stroke-width="2" />
+  
+  <!-- Subtle Inner Ring -->
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="none" stroke="#d4af37" stroke-width="0.75" stroke-opacity="0.4" />
+
+  <!-- Signature Serif 'N' in Champagne Gold -->
+  <text x="18" y="47" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="44" font-weight="700" fill="url(#goldGrad)">N</text>
+
+  <!-- Signature Vibrant Green Leaf Detail -->
+  <path d="M 41 15 C 49 14 54 20 49 27 C 43 27 38 23 41 15 Z" fill="url(#leafGrad)" />
+  <path d="M 41 24 C 44 21 47 18 49 16" stroke="#062019" stroke-width="0.8" fill="none" />
+</svg>
