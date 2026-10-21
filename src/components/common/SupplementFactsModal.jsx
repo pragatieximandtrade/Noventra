@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import AmazonButton from './AmazonButton';
+import ComplianceDisclaimerBox from './ComplianceDisclaimerBox';
 import { fdaDisclaimer } from '../../data/products';
 import { getLenis } from '../../utils/scroll';
 
@@ -156,11 +157,8 @@ export default function SupplementFactsModal({ isOpen, onClose, product }) {
                 )}
               </div>
 
-              {/* FDA Mandatory Disclaimer */}
-              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-[11px] text-amber-900 leading-snug">
-                <span className="font-bold block mb-0.5">FDA DISCLAIMER:</span>
-                {fdaDisclaimer}
-              </div>
+              {/* FDA Mandatory Compliance Disclaimer */}
+              <ComplianceDisclaimerBox variant="sand" className="p-4 rounded-xl" />
 
             </div>
 

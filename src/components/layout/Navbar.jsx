@@ -62,6 +62,7 @@ export default function Navbar() {
       ]
     },
     { name: 'Quality & Sourcing', path: '/quality' },
+    { name: 'Blog', path: '/blog' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -190,12 +191,6 @@ export default function Navbar() {
 
           {/* Desktop Right Action: Amazon CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/shop"
-              className="text-xs uppercase tracking-wider font-semibold text-noventra-forest hover:text-noventra-leaf px-3 py-2"
-            >
-              Shop Catalog
-            </Link>
             <AmazonButton
               url={brandInfo.amazonStoreUrl}
               productName="Noventra Store"
@@ -290,6 +285,12 @@ export default function Navbar() {
                 className="text-base font-semibold text-noventra-forest hover:text-noventra-leaf py-1"
               >
                 Quality & Transparency
+              </Link>
+              <Link
+                to="/blog"
+                className="text-base font-semibold text-noventra-forest hover:text-noventra-leaf py-1"
+              >
+                Blog & Science
               </Link>
               <Link
                 to="/faq"

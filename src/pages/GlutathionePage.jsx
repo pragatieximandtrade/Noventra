@@ -19,7 +19,9 @@ import {
   HeartHandshake,
   Dna,
   Check,
-  FlaskConical
+  FlaskConical,
+  Building2,
+  AlertCircle
 } from 'lucide-react';
 import { products, fdaDisclaimer, brandInfo } from '../data/products';
 import ProductBottle3D from '../components/3d/ProductBottle3D';
@@ -29,6 +31,7 @@ import SupplementFactsModal from '../components/common/SupplementFactsModal';
 import CoaModal from '../components/common/CoaModal';
 import CoaSection from '../components/common/CoaSection';
 import ComparisonSection from '../components/common/ComparisonSection';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function GlutathionePage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -104,10 +107,10 @@ export default function GlutathionePage() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-noventra-forest text-noventra-gold border border-noventra-gold/50 shadow-sm text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-noventra-gold" />
-                <span>{product.badgeTitle}</span>
+                <span>{renderWithFootnotes(product.badgeTitle)}</span>
               </span>
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/80 border border-noventra-sand-200 text-gray-700 text-xs font-medium">
-                Advanced Liposomal Formulation
+                {renderWithFootnotes('Advanced Liposomal Formulation')}
               </span>
             </div>
 
@@ -117,13 +120,13 @@ export default function GlutathionePage() {
                 {product.subtitle}
               </h1>
               <p className="font-serif italic text-lg sm:text-xl text-noventra-leaf mt-1">
-                L-Glutathione Base Powered by a Synergistic Nutrient Complex
+                {renderWithFootnotes('L-Glutathione Base Powered by a Synergistic Nutrient Complex')}
               </p>
             </div>
 
             {/* Subheadline & Product Philosophy */}
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-light">
-              {product.aboutProduct}
+              {renderWithFootnotes(product.aboutProduct)}
             </p>
 
             {/* Numerical Reveals Information Cards */}
@@ -171,19 +174,26 @@ export default function GlutathionePage() {
               </button>
             </div>
 
-            {/* Vegetarian Note & cGMP certification */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs text-gray-500 pt-1">
-              <span className="inline-flex items-center gap-1 font-semibold text-noventra-forest bg-noventra-sand/70 px-2.5 py-1 rounded-full border border-noventra-gold/30 shadow-xs">
-                <FlaskConical className="w-3.5 h-3.5 text-noventra-gold" />
+            {/* Hero Trust & Quality Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2 text-xs">
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <FlaskConical className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>Third-Party Lab Tested</span>
               </span>
-              <span className="inline-flex items-center gap-1">
-                <Award className="w-4 h-4 text-amber-500" />
-                <span>cGMP Certified Facility • USFDA Approved Plant</span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Award className="w-3.5 h-3.5 text-amber-600" />
+                <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹')}</span>
               </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1">
-                <CheckCircle2 className="w-4 h-4 text-noventra-leaf" />
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Award className="w-3.5 h-3.5 text-amber-600" />
+                <span>cGMP Certified Facility</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Building2 className="w-3.5 h-3.5 text-amber-600" />
+                <span>USFDA Approved Plant</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>100% Vegan</span>
               </span>
             </div>
@@ -222,16 +232,225 @@ export default function GlutathionePage() {
               </div>
               <div className="h-12 flex items-center justify-center mb-2 px-1 w-full flex-shrink-0">
                 <h3 className="font-serif font-bold text-sm text-noventra-forest leading-snug">
-                  {pillar.title}
+                  {renderWithFootnotes(pillar.title)}
                 </h3>
               </div>
               <p className="text-[11px] text-gray-600 font-light leading-relaxed flex-1 flex items-start justify-center">
-                {pillar.desc}
+                {renderWithFootnotes(pillar.desc)}
               </p>
             </motion.div>
           ))}
         </div>
       </section>
+
+      {/* 2B. EDITORIAL PRODUCT DETAILS & SCIENTIFIC INGREDIENTS MONOGRAPH */}
+      {product.productDetails && (
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 border border-noventra-gold/30 shadow-xl space-y-10">
+            
+            {/* Monograph Header */}
+            <div className="border-b border-noventra-gold/25 pb-6 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-noventra-leaf/30 text-noventra-forest text-xs font-semibold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-noventra-leaf" />
+                <span>{product.productDetails.sectionBadge}</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-noventra-forest leading-tight">
+                {product.productDetails.title}
+              </h2>
+            </div>
+
+            {/* Introductory Editorial Paragraphs */}
+            <div className="space-y-4 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">
+              {product.productDetails.introParagraphs.map((para, i) => (
+                <p key={i} className="text-justify sm:text-left">
+                  {renderWithFootnotes(para)}
+                </p>
+              ))}
+            </div>
+
+            {/* Benefits of Noventra Liposomal Glutathione */}
+            <div className="space-y-4 pt-4 border-t border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                <span>{product.productDetails.benefits.title}</span>
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                {product.productDetails.benefits.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-noventra-sand/30 border border-noventra-sand-200/60 text-xs sm:text-sm text-gray-700 leading-snug">
+                    <CheckCircle2 className="w-4 h-4 text-noventra-leaf flex-shrink-0 mt-0.5" />
+                    <span>{renderWithFootnotes(item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Features of Noventra Liposomal Glutathione */}
+            <div className="space-y-4 pt-4 border-t border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                <span>{product.productDetails.features.title}</span>
+              </h3>
+              <ul className="space-y-2.5 pt-1">
+                {product.productDetails.features.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-emerald-50/40 border border-noventra-leaf/20 text-xs sm:text-sm text-gray-700 leading-snug">
+                    <ShieldCheck className="w-4 h-4 text-noventra-forest flex-shrink-0 mt-0.5" />
+                    <span>{renderWithFootnotes(item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Comprehensive Scientific Breakdown of Every Ingredient */}
+            {product.productDetails.ingredientsBreakdown && (
+              <div className="space-y-6 pt-4 border-t border-gray-100">
+                <div className="space-y-1.5">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest flex items-center gap-2.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                    <span>{product.productDetails.ingredientsBreakdown.title}</span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 font-light">
+                    {product.productDetails.ingredientsBreakdown.subtitle}
+                  </p>
+                </div>
+
+                <div className="space-y-4 pt-1">
+                  {product.productDetails.ingredientsBreakdown.ingredients.map((ing, i) => (
+                    <div
+                      key={i}
+                      className={`p-5 sm:p-6 rounded-2xl border transition-all ${
+                        i === 0
+                          ? 'bg-gradient-to-br from-amber-50/70 via-white to-emerald-50/40 border-noventra-gold/50 shadow-sm ring-1 ring-noventra-gold/30'
+                          : 'bg-white border-noventra-sand-200/90 hover:border-noventra-gold/40 shadow-xs'
+                      }`}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-100 pb-3 mb-3">
+                        <div className="space-y-0.5">
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-noventra-forest/10 text-noventra-forest border border-noventra-forest/20 inline-block mb-1">
+                            {ing.category}
+                          </span>
+                          <h4 className="text-base sm:text-lg font-serif font-bold text-noventra-forest">
+                            {ing.name}
+                          </h4>
+                        </div>
+                        <div className="text-left sm:text-right">
+                          <span className="text-sm sm:text-base font-serif font-bold text-noventra-leaf block">
+                            {ing.dosage}
+                          </span>
+                          <span className="text-[11px] text-gray-500 font-medium">
+                            {ing.dv}
+                          </span>
+                        </div>
+                      </div>
+
+                      <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
+                        {renderWithFootnotes(ing.role)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Why is the Liposomal Redox Network Important? */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-50/60 via-white to-amber-50/40 border border-noventra-gold/30 space-y-4">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest">
+                {product.productDetails.whyImportant.title}
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed font-light">
+                {product.productDetails.whyImportant.paragraphs ? (
+                  product.productDetails.whyImportant.paragraphs.map((para, i) => (
+                    <p key={i}>
+                      {renderWithFootnotes(para)}
+                    </p>
+                  ))
+                ) : (
+                  <p>{renderWithFootnotes(product.productDetails.whyImportant.paragraph)}</p>
+                )}
+              </div>
+            </div>
+
+            {/* Tested for quality you can trust */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-noventra-sand/40 border border-noventra-sand-200 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <FlaskConical className="w-5 h-5 text-noventra-leaf" />
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-noventra-forest">
+                  {product.productDetails.testedQuality.title}
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
+                {product.productDetails.testedQuality.paragraph}
+              </p>
+              <div className="flex flex-wrap items-center gap-2 pt-1 text-xs font-semibold text-noventra-forest">
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ Third-Party Lab Tested (ISO 17025)
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ cGMP Certified Facility
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ USFDA Approved Plant
+                </span>
+              </div>
+            </div>
+
+            {/* Warnings Section (Enclosed in a Premium Box with Structured Cards) */}
+            {product.warnings && (
+              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-noventra-sand/40 via-white to-amber-50/20 border border-noventra-gold/35 shadow-sm space-y-5">
+                
+                {/* Header */}
+                <div className="flex items-center justify-between border-b border-noventra-gold/20 pb-3.5">
+                  <div className="flex items-center gap-2.5">
+                    <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest tracking-tight">
+                      Warnings
+                    </h3>
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-100/70 border border-amber-300 text-amber-900">
+                    Clinical Advisory
+                  </span>
+                </div>
+
+                {/* 2x2 Grid of Warning Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {product.warnings.map((w, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-4 sm:p-5 rounded-xl bg-white border border-noventra-gold/25 shadow-2xs space-y-1.5 flex flex-col justify-between ${
+                        idx === 3 ? 'md:col-span-2 bg-gradient-to-r from-white via-amber-50/20 to-white' : ''
+                      }`}
+                    >
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-noventra-forest">
+                          <span className="w-1.5 h-1.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                          <span>{w.title}</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
+                          {w.content}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            )}
+
+            {/* Action Call to Action */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-100">
+              <span className="text-xs text-gray-500 font-light">
+                500 mg Active Reduced GSH + 4 Synergy Co-Actives • 60 Vegetarian Capsules
+              </span>
+              <AmazonButton
+                url={product.amazonUrl}
+                productName={product.name}
+                size="md"
+                variant="gold"
+              />
+            </div>
+
+          </div>
+        </section>
+      )}
 
       {/* 3. CORE L-GLUTATHIONE ARCHITECTURE & 5 COMBINATION INGREDIENTS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -276,7 +495,7 @@ export default function GlutathionePage() {
                         ? 'bg-amber-400 text-noventra-dark border-amber-500 font-extrabold'
                         : 'bg-amber-100 text-amber-900 border-amber-200'
                     }`}>
-                      {card.tag}
+                      {renderWithFootnotes(card.tag)}
                     </span>
                   </div>
 
@@ -294,13 +513,13 @@ export default function GlutathionePage() {
                       </span>
                     </div>
                     <p className="text-xs font-medium text-amber-800/90 mt-0.5">
-                      {card.details}
+                      {renderWithFootnotes(card.details)}
                     </p>
                   </div>
 
                   {/* Educational Content */}
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light pt-2 border-t border-gray-100">
-                    {card.role}
+                    {renderWithFootnotes(card.role)}
                   </p>
                 </div>
 
@@ -330,7 +549,7 @@ export default function GlutathionePage() {
               Purity, Bioavailability & Rigorous Testing
             </h3>
             <p className="text-xs sm:text-sm text-noventra-sand-200/85 leading-relaxed font-light">
-              Every batch of Noventra Liposomal Glutathione is engineered with precision active dosages, verified cofactor synergy, third-party lab tested, and manufactured in a cGMP certified facility and USFDA approved plant under rigorous quality controls.
+              {renderWithFootnotes('Every batch of Noventra Liposomal Glutathione is engineered with precision active dosages, verified cofactor synergy, third-party lab tested, and manufactured in a cGMP certified facility and USFDA approved plant under rigorous quality controls.', true)}
             </p>
           </div>
 
@@ -339,10 +558,10 @@ export default function GlutathionePage() {
             {product.labelFeatures.map((feat, idx) => (
               <div key={idx} className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2 hover:bg-white/10 transition-colors">
                 <div className="text-amber-300 font-bold text-xs uppercase tracking-wider">
-                  {feat.title}
+                  {renderWithFootnotes(feat.title, true)}
                 </div>
                 <p className="text-xs text-noventra-sand-200/80 leading-relaxed font-light">
-                  {feat.description}
+                  {renderWithFootnotes(feat.description, true)}
                 </p>
               </div>
             ))}
@@ -487,14 +706,47 @@ export default function GlutathionePage() {
 
             </div>
 
-            {/* Distribution & Manufacturer Info */}
-            <div className="p-6 rounded-2xl bg-white border border-noventra-sand-200 shadow-sm space-y-2 text-xs text-gray-700">
-              <strong className="text-noventra-forest uppercase tracking-wider block text-[11px]">
-                Distributed By:
-              </strong>
-              <div className="font-semibold text-noventra-forest">NOVENTRA</div>
-              <p className="text-gray-600">{brandInfo.address}</p>
-              <div className="text-noventra-leaf font-medium">{brandInfo.website}</div>
+            {/* Quality & Formulation Checkpoints */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div className="p-4 rounded-2xl bg-white border border-noventra-sand-200 shadow-sm space-y-1">
+                <div className="flex items-center gap-2 text-noventra-forest font-bold text-xs">
+                  <FlaskConical className="w-4 h-4 text-noventra-gold" />
+                  <span>Third-Party Lab Tested</span>
+                </div>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Every batch tested by ISO/IEC 17025 accredited labs for active purity & potency.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-noventra-sand-200 shadow-sm space-y-1">
+                <div className="flex items-center gap-2 text-noventra-forest font-bold text-xs">
+                  <Award className="w-4 h-4 text-amber-500" />
+                  <span>cGMP & USFDA Plant</span>
+                </div>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Manufactured in a cGMP certified facility and USFDA approved plant.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-noventra-sand-200 shadow-sm space-y-1">
+                <div className="flex items-center gap-2 text-noventra-leaf font-bold text-xs">
+                  <Atom className="w-4 h-4 text-noventra-leaf" />
+                  <span>Liposomal Encapsulation</span>
+                </div>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Phospholipid matrix protects active glutathione from stomach acid degradation.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-50/70 via-white to-amber-50/50 border border-noventra-gold/30 shadow-sm space-y-1">
+                <div className="flex items-center gap-2 text-noventra-forest font-bold text-xs">
+                  <ShieldCheck className="w-4 h-4 text-noventra-gold" />
+                  <span>500 mg Active Reduced GSH</span>
+                </div>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  Standardized 50% active yield fortified with 4 recycling synergistic cofactors.
+                </p>
+              </div>
             </div>
 
           </div>

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { brandInfo, products } from '../data/products';
 import AmazonButton from '../components/common/AmazonButton';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function AboutPage() {
   return (
@@ -23,7 +24,7 @@ export default function AboutPage() {
       <section className="text-center space-y-6 pt-6 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-noventra-gold/30 shadow-sm text-noventra-forest text-xs font-semibold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5 text-noventra-gold" />
-          <span>About Noventra</span>
+          <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹ • About Noventra')}</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-noventra-forest leading-tight">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldAlert, AlertTriangle } from 'lucide-react';
 import { fdaDisclaimer } from '../data/products';
+import ComplianceDisclaimerBox from '../components/common/ComplianceDisclaimerBox';
 
 export default function DisclaimerPage() {
   return (
@@ -18,6 +19,9 @@ export default function DisclaimerPage() {
           Applicable to all NOVENTRA Formulations & Web Pages
         </p>
       </div>
+
+      {/* Official Footnotes & Regulatory Matrix */}
+      <ComplianceDisclaimerBox className="shadow-lg" />
 
       {/* Prominent Callout Box */}
       <div className="p-6 sm:p-8 rounded-2xl bg-amber-50 border-2 border-amber-300 text-amber-950 space-y-4">

@@ -9,6 +9,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import AmazonButton from './AmazonButton';
+import { renderWithFootnotes } from './FootnoteSup';
 
 export default function ComparisonSection({ product }) {
   if (!product || !product.comparison) return null;
@@ -27,7 +28,7 @@ export default function ComparisonSection({ product }) {
           {comp.title}
         </h2>
         <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
-          {comp.subtitle}
+          {renderWithFootnotes(comp.subtitle)}
         </p>
       </div>
 
@@ -76,7 +77,7 @@ export default function ComparisonSection({ product }) {
               {/* Feature Factor */}
               <div className="col-span-3 p-5 flex flex-col justify-center bg-[#fdfbf8]">
                 <span className="font-serif font-bold text-sm text-noventra-forest">
-                  {row.factor}
+                  {renderWithFootnotes(row.factor)}
                 </span>
               </div>
 
@@ -87,10 +88,10 @@ export default function ComparisonSection({ product }) {
                 </div>
                 <div className="space-y-1">
                   <span className="font-bold text-sm text-noventra-forest block leading-snug">
-                    {row.noventra}
+                    {renderWithFootnotes(row.noventra)}
                   </span>
                   <p className="text-xs text-gray-600 font-light leading-relaxed">
-                    {row.noventraDetail}
+                    {renderWithFootnotes(row.noventraDetail)}
                   </p>
                 </div>
               </div>
@@ -102,10 +103,10 @@ export default function ComparisonSection({ product }) {
                 </div>
                 <div className="space-y-1">
                   <span className="font-semibold text-sm text-gray-700 block leading-snug">
-                    {row.others}
+                    {renderWithFootnotes(row.others)}
                   </span>
                   <p className="text-xs text-gray-500 font-light leading-relaxed">
-                    {row.othersDetail}
+                    {renderWithFootnotes(row.othersDetail)}
                   </p>
                 </div>
               </div>
@@ -124,7 +125,7 @@ export default function ComparisonSection({ product }) {
             {/* Factor Header */}
             <div className="flex items-center justify-between pb-2 border-b border-gray-100">
               <span className="font-serif font-bold text-base text-noventra-forest">
-                {row.factor}
+                {renderWithFootnotes(row.factor)}
               </span>
               <span className="text-[10px] font-mono text-gray-400">
                 0{idx + 1}
@@ -140,10 +141,10 @@ export default function ComparisonSection({ product }) {
                 <span>Noventra Standard:</span>
               </div>
               <div className="text-xs font-bold text-noventra-forest">
-                {row.noventra}
+                {renderWithFootnotes(row.noventra)}
               </div>
               <p className="text-[11px] text-gray-600 font-light leading-relaxed">
-                {row.noventraDetail}
+                {renderWithFootnotes(row.noventraDetail)}
               </p>
             </div>
 
@@ -156,10 +157,10 @@ export default function ComparisonSection({ product }) {
                 <span>Typical Market Brands:</span>
               </div>
               <div className="text-xs font-semibold text-gray-700">
-                {row.others}
+                {renderWithFootnotes(row.others)}
               </div>
               <p className="text-[11px] text-gray-500 font-light leading-relaxed">
-                {row.othersDetail}
+                {renderWithFootnotes(row.othersDetail)}
               </p>
             </div>
           </div>

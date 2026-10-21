@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, ShieldCheck, Mail, ArrowRight, CheckCircle2, Lock } from 'lucide-react';
 import { brandInfo, products, fdaDisclaimer } from '../../data/products';
 import AmazonButton from '../common/AmazonButton';
+import ComplianceDisclaimerBox from '../common/ComplianceDisclaimerBox';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -166,6 +167,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/blog" className="hover:text-white transition-colors">
+                  Wellness Journal & Blog
+                </Link>
+              </li>
+              <li>
                 <Link to="/faq" className="hover:text-white transition-colors">
                   FAQ & Guidelines
                 </Link>
@@ -196,22 +202,7 @@ export default function Footer() {
         </div>
 
         {/* FDA Dietary Supplement Mandatory Compliance Box */}
-        <div className="my-8 p-5 rounded-2xl bg-noventra-charcoal/90 border border-amber-500/20 text-[11px] text-noventra-sand-200/75 leading-relaxed">
-          <div className="flex items-start gap-2.5">
-            <ShieldCheck className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-            <div>
-              <strong className="text-white block mb-1 uppercase tracking-wider text-[10px]">
-                FDA Compliance & Health Information Notice:
-              </strong>
-              <p className="italic">
-                {fdaDisclaimer}
-              </p>
-              <p className="mt-1 text-gray-400">
-                The information provided on this website is for educational and informational purposes only and is not intended as medical advice. Always consult with a licensed healthcare practitioner before starting any supplement regimen, especially if you are pregnant, nursing, taking medications, or have a medical condition.
-              </p>
-            </div>
-          </div>
-        </div>
+        <ComplianceDisclaimerBox className="my-8" />
 
         {/* Copyright & Legal Sub-Footer */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 pt-4">

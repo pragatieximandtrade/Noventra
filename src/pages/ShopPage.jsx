@@ -6,6 +6,7 @@ import { products, brandInfo } from '../data/products';
 import ProductBottle3D from '../components/3d/ProductBottle3D';
 import AmazonButton from '../components/common/AmazonButton';
 import SupplementFactsModal from '../components/common/SupplementFactsModal';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function ShopPage() {
   const [filter, setFilter] = useState('all');
@@ -117,7 +118,7 @@ export default function ShopPage() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
-                  {prod.description}
+                  {renderWithFootnotes(prod.description)}
                 </p>
 
                 {/* Specs List */}

@@ -19,7 +19,11 @@ import {
   Bone,
   HeartPulse,
   Award,
-  FlaskConical
+  FlaskConical,
+  Building2,
+  Users,
+  AlertCircle,
+  Wind
 } from 'lucide-react';
 import { products, fdaDisclaimer } from '../data/products';
 import ProductBottle3D from '../components/3d/ProductBottle3D';
@@ -29,6 +33,7 @@ import SupplementFactsModal from '../components/common/SupplementFactsModal';
 import CoaModal from '../components/common/CoaModal';
 import CoaSection from '../components/common/CoaSection';
 import ComparisonSection from '../components/common/ComparisonSection';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function MagnesiumPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -99,7 +104,7 @@ export default function MagnesiumPage() {
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-light">
-              {product.description}
+              {renderWithFootnotes(product.description)}
             </p>
 
             {/* Animated Information Cards (120mg Elemental & 90 Servings) */}
@@ -124,9 +129,9 @@ export default function MagnesiumPage() {
               <div className="p-4 rounded-2xl bg-white border border-noventra-gold/30 shadow-md col-span-2 sm:col-span-1">
                 <span className="text-xs text-gray-500 font-medium block">Form</span>
                 <span className="text-lg font-serif font-bold text-noventra-forest block mt-1">
-                  Bisglycinate
+                  Glycinate
                 </span>
-                <span className="text-[11px] text-noventra-leaf font-semibold">Gentle Absorption</span>
+                <span className="text-[11px] text-noventra-leaf font-semibold">{renderWithFootnotes('Gentle Absorption')}</span>
               </div>
 
             </div>
@@ -147,24 +152,30 @@ export default function MagnesiumPage() {
               </button>
             </div>
 
-            {/* Capsule Excipient Note */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 text-xs text-gray-500 pt-1">
-              <span className="inline-flex items-center gap-1 font-semibold text-noventra-forest bg-noventra-sand/70 px-2.5 py-1 rounded-full border border-noventra-gold/30 shadow-xs">
-                <FlaskConical className="w-3.5 h-3.5 text-noventra-gold" />
+            {/* Hero Trust & Quality Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2 text-xs">
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <FlaskConical className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>Third-Party Lab Tested</span>
               </span>
-              <span className="inline-flex items-center gap-1">
-                <Award className="w-4 h-4 text-amber-500" />
-                <span>cGMP Certified Facility • USFDA Approved Plant</span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Award className="w-3.5 h-3.5 text-amber-600" />
+                <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹')}</span>
               </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1">
-                <ShieldCheck className="w-4 h-4 text-noventra-leaf" />
-                <span>100% Pure Bisglycinate</span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Award className="w-3.5 h-3.5 text-amber-600" />
+                <span>cGMP Certified Facility</span>
               </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1">
-                <CheckCircle2 className="w-4 h-4 text-noventra-leaf" />
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <Building2 className="w-3.5 h-3.5 text-amber-600" />
+                <span>USFDA Approved Plant</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <ShieldCheck className="w-3.5 h-3.5 text-noventra-leaf" />
+                <span>100% Pure Glycinate</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>Zero Gelatin</span>
               </span>
             </div>
@@ -203,16 +214,308 @@ export default function MagnesiumPage() {
               </div>
               <div className="h-12 flex items-center justify-center mb-2 px-1 w-full flex-shrink-0">
                 <h3 className="font-serif font-bold text-sm text-noventra-forest leading-snug">
-                  {pillar.title}
+                  {renderWithFootnotes(pillar.title)}
                 </h3>
               </div>
               <p className="text-[11px] text-gray-600 font-light leading-relaxed flex-1 flex items-start justify-center">
-                {pillar.desc}
+                {renderWithFootnotes(pillar.desc)}
               </p>
             </motion.div>
           ))}
         </div>
       </section>
+
+      {/* 2B. THORNE-STYLE EDITORIAL PRODUCT DETAILS SECTION */}
+      {product.productDetails && (
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-14 border border-noventra-gold/30 shadow-xl space-y-10">
+            
+            {/* Monograph Header */}
+            <div className="border-b border-noventra-gold/25 pb-6 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-noventra-leaf/30 text-noventra-forest text-xs font-semibold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-noventra-leaf" />
+                <span>{product.productDetails.sectionBadge}</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-noventra-forest leading-tight">
+                {product.productDetails.title}
+              </h2>
+            </div>
+
+            {/* Introductory Editorial Paragraphs */}
+            <div className="space-y-4 text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">
+              {product.productDetails.introParagraphs.map((para, i) => (
+                <p key={i} className="text-justify sm:text-left">
+                  {renderWithFootnotes(para)}
+                </p>
+              ))}
+            </div>
+
+            {/* Benefits of Noventra Magnesium Glycinate */}
+            <div className="space-y-4 pt-4 border-t border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                <span>{product.productDetails.benefits.title}</span>
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                {product.productDetails.benefits.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 p-3 rounded-xl bg-noventra-sand/30 border border-noventra-sand-200/60 text-xs sm:text-sm text-gray-700 leading-snug">
+                    <CheckCircle2 className="w-4 h-4 text-noventra-leaf flex-shrink-0 mt-0.5" />
+                    <span>{renderWithFootnotes(item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Features of Noventra Magnesium Glycinate */}
+            <div className="space-y-4 pt-4 border-t border-gray-100">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                <span>{product.productDetails.features.title}</span>
+              </h3>
+              <ul className="space-y-2.5 pt-1">
+                {product.productDetails.features.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-emerald-50/40 border border-noventra-leaf/20 text-xs sm:text-sm text-gray-700 leading-snug">
+                    <ShieldCheck className="w-4 h-4 text-noventra-forest flex-shrink-0 mt-0.5" />
+                    <span>{renderWithFootnotes(item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Why is magnesium important? */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-50/60 via-white to-amber-50/40 border border-noventra-gold/30 space-y-4">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest">
+                {product.productDetails.whyImportant.title}
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed font-light">
+                {product.productDetails.whyImportant.paragraphs ? (
+                  product.productDetails.whyImportant.paragraphs.map((para, i) => (
+                    <p key={i}>
+                      {renderWithFootnotes(para)}
+                    </p>
+                  ))
+                ) : (
+                  <p>{renderWithFootnotes(product.productDetails.whyImportant.paragraph)}</p>
+                )}
+              </div>
+            </div>
+
+            {/* What did people experience when using Noventra Magnesium Glycinate? */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-noventra-forest to-[#082a1f] text-white border border-noventra-gold/40 shadow-md space-y-5">
+              <div className="space-y-2">
+                <span className="text-xs uppercase font-bold tracking-widest text-noventra-gold flex items-center gap-2">
+                  <Users className="w-3.5 h-3.5" />
+                  28-Day Consumer Perception Study
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">
+                  {product.productDetails.consumerExperience.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-noventra-sand-200/90 leading-relaxed font-light">
+                  {renderWithFootnotes(product.productDetails.consumerExperience.intro)}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-white/15 space-y-3">
+                <h4 className="text-xs uppercase tracking-wider font-bold text-noventra-gold">
+                  {product.productDetails.consumerExperience.reportedTitle}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {product.productDetails.consumerExperience.stats.map((stat, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/10 border border-white/10">
+                      <span className="text-lg font-serif font-black text-noventra-gold flex-shrink-0">
+                        {stat.percent}
+                      </span>
+                      <span className="text-xs text-white/90 leading-snug">
+                        {stat.text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-[11px] text-gray-300 font-light italic pt-1">
+                  {product.productDetails.consumerExperience.footnote}
+                </p>
+              </div>
+            </div>
+
+            {/* Tested for quality you can trust */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-noventra-sand/40 border border-noventra-sand-200 space-y-4">
+              <div className="flex items-center gap-2.5">
+                <FlaskConical className="w-5 h-5 text-noventra-leaf" />
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-noventra-forest">
+                  {product.productDetails.testedQuality.title}
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
+                {product.productDetails.testedQuality.paragraph}
+              </p>
+              <div className="flex flex-wrap items-center gap-2 pt-1 text-xs font-semibold text-noventra-forest">
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ Third-Party Lab Tested (ISO 17025)
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ cGMP Certified Facility
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-white border border-noventra-leaf/30 shadow-2xs flex items-center gap-1.5">
+                  ✓ USFDA Approved Plant
+                </span>
+              </div>
+            </div>
+
+            {/* Warnings Section (Enclosed in a Premium Box with Structured Cards) */}
+            {product.warnings && (
+              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-noventra-sand/40 via-white to-amber-50/20 border border-noventra-gold/35 shadow-sm space-y-5">
+                
+                {/* Header */}
+                <div className="flex items-center justify-between border-b border-noventra-gold/20 pb-3.5">
+                  <div className="flex items-center gap-2.5">
+                    <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-noventra-forest tracking-tight">
+                      Warnings
+                    </h3>
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-amber-100/70 border border-amber-300 text-amber-900">
+                    Clinical Advisory
+                  </span>
+                </div>
+
+                {/* 2x2 Grid of Warning Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {product.warnings.map((w, idx) => (
+                    <div
+                      key={idx}
+                      className={`p-4 sm:p-5 rounded-xl bg-white border border-noventra-gold/25 shadow-2xs space-y-1.5 flex flex-col justify-between ${
+                        idx === 3 ? 'md:col-span-2 bg-gradient-to-r from-white via-amber-50/20 to-white' : ''
+                      }`}
+                    >
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-noventra-forest">
+                          <span className="w-1.5 h-1.5 rounded-full bg-noventra-gold flex-shrink-0" />
+                          <span>{w.title}</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
+                          {w.content}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            )}
+
+            {/* Action Call to Action */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-100">
+              <span className="text-xs text-gray-500 font-light">
+                Pure Elemental 120 mg Magnesium (29% DV) • 90 Vegetarian Capsules
+              </span>
+              <AmazonButton
+                url={product.amazonUrl}
+                productName={product.name}
+                size="md"
+                variant="primary"
+              />
+            </div>
+
+          </div>
+        </section>
+      )}
+
+      {/* 2C. CONSUMER PERCEPTION STUDY & REAL EXPERIENCES */}
+      {product.consumerStudy && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          {/* Header */}
+          <div className="text-center space-y-3 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-noventra-leaf/30 text-noventra-forest text-xs font-semibold uppercase tracking-wider shadow-xs">
+              <Users className="w-3.5 h-3.5 text-noventra-leaf" />
+              <span>{product.consumerStudy.tagline}</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-noventra-forest">
+              {product.consumerStudy.headline}
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed font-light">
+              {renderWithFootnotes(product.consumerStudy.subtitle)}
+            </p>
+          </div>
+
+          {/* Hero Highlight Banner: 9 out of 10 Consumers */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-noventra-forest via-[#07241a] to-noventra-emerald text-white p-6 sm:p-8 md:p-10 border border-noventra-gold/40 shadow-xl">
+            <div className="absolute -right-16 -top-16 w-64 h-64 bg-noventra-gold/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-5 text-center sm:text-left">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-noventra-gold/30 to-noventra-gold/10 border border-noventra-gold/50 flex flex-col items-center justify-center flex-shrink-0 shadow-inner">
+                  <span className="text-2xl sm:text-3xl font-serif font-black text-noventra-gold leading-none">9 / 10</span>
+                  <span className="text-[10px] text-amber-200/90 font-semibold uppercase tracking-wider mt-1">Consumers</span>
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-xs uppercase font-bold tracking-widest text-noventra-gold flex items-center justify-center sm:justify-start gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    28-Day Consumer Perception Study
+                  </span>
+                  <p className="text-base sm:text-lg md:text-xl font-serif font-medium text-white leading-snug">
+                    {renderWithFootnotes(product.consumerStudy.headlineHighlight)}
+                  </p>
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-full sm:w-auto">
+                <AmazonButton
+                  url={product.amazonUrl}
+                  productName={product.name}
+                  size="md"
+                  variant="gold"
+                  className="w-full sm:w-auto"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Metrics 6-Card Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {product.consumerStudy.metrics.map((m, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08 }}
+                className="p-6 rounded-2xl bg-white border border-noventra-gold/25 shadow-sm hover:shadow-md hover:border-noventra-gold transition-all duration-300 flex flex-col justify-between space-y-3 group"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-baseline justify-between">
+                    <span className="text-4xl sm:text-5xl font-serif font-black text-noventra-forest tracking-tight group-hover:text-noventra-leaf transition-colors">
+                      {m.percent}
+                    </span>
+                    <span className="w-8 h-8 rounded-full bg-emerald-50 text-noventra-leaf border border-noventra-leaf/20 flex items-center justify-center text-xs font-bold">
+                      ✓
+                    </span>
+                  </div>
+                  {/* Visual Progress Bar */}
+                  <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                    <div
+                      className="bg-gradient-to-r from-noventra-gold to-noventra-leaf h-full rounded-full transition-all duration-1000"
+                      style={{ width: m.percent }}
+                    />
+                  </div>
+                  <h3 className="text-base font-serif font-bold text-noventra-forest pt-1">
+                    {renderWithFootnotes(m.label)}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed font-light">
+                    {renderWithFootnotes(m.desc)}
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-gray-100 flex items-center gap-1.5 text-[10px] text-noventra-leaf font-semibold uppercase tracking-wider">
+                  <CheckCircle2 className="w-3 h-3" />
+                  <span>Verified Study Participant Response</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Footnote Notice */}
+          <div className="text-center text-[11px] text-gray-500 font-light italic">
+            {product.consumerStudy.footnote}
+          </div>
+        </section>
+      )}
 
       {/* 3. NOVENTRA VS. TYPICAL MARKET ALTERNATIVES COMPARISON */}
       <ComparisonSection product={product} />
@@ -375,7 +678,7 @@ export default function MagnesiumPage() {
                   <span>100% Pure Magnesium Glycinate</span>
                 </div>
                 <p className="text-[11px] text-gray-600 leading-relaxed">
-                  Strictly pure, unbuffered Bisglycinate with zero oxide spiking.
+                  Strictly pure, unbuffered Glycinate with zero oxide spiking.
                 </p>
               </div>
             </div>
@@ -384,6 +687,107 @@ export default function MagnesiumPage() {
 
         </div>
       </section>
+
+      {/* 4B. WHOLE-BODY HEALTH & 75% DIETARY SHORTFALL */}
+      {product.wholeBodyHealth && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          
+          <div className="text-center space-y-3 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-noventra-gold/40 text-noventra-forest text-xs font-semibold uppercase tracking-wider shadow-xs">
+              <Activity className="w-3.5 h-3.5 text-noventra-gold" />
+              <span>{product.wholeBodyHealth.tagline}</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-noventra-forest">
+              {product.wholeBodyHealth.headline}
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed font-light">
+              {renderWithFootnotes(product.wholeBodyHealth.subtitle)}
+            </p>
+          </div>
+
+          {/* 2-Column Insight: 75% Deficiency Reality on Left, 4 Multi-System Pathways on Right */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            {/* Left Column: The 75% Dietary Reality & Common Symptoms */}
+            <div className="lg:col-span-5 rounded-3xl bg-white border border-noventra-gold/30 shadow-lg p-6 sm:p-8 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold">
+                  <AlertCircle className="w-3.5 h-3.5 text-amber-600" />
+                  <span>{product.wholeBodyHealth.statsBadge}</span>
+                </div>
+
+                <div className="flex items-baseline gap-3">
+                  <span className="text-5xl sm:text-6xl font-serif font-black text-noventra-forest">
+                    {product.wholeBodyHealth.deficiencyStat}
+                  </span>
+                  <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Of Adults Fall Short
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
+                  {renderWithFootnotes(product.wholeBodyHealth.deficiencyStatContext)}
+                </p>
+
+                <div className="pt-2 border-t border-gray-100">
+                  <h4 className="text-xs uppercase font-bold tracking-wider text-noventra-forest mb-3">
+                    {product.wholeBodyHealth.deficiencyDescription}
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {product.wholeBodyHealth.manifestations.map((item, idx) => (
+                      <div key={idx} className="p-3 rounded-xl bg-noventra-sand/40 border border-noventra-sand-200/80 space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-noventra-forest">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 flex-shrink-0" />
+                          <span>{item.title}</span>
+                        </div>
+                        <p className="text-[11px] text-gray-600 leading-snug font-light">
+                          {item.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-emerald-50 border border-noventra-leaf/30 text-[11px] text-noventra-forest flex items-center gap-2.5">
+                <ShieldCheck className="w-5 h-5 text-noventra-leaf flex-shrink-0" />
+                <span>Noventra delivers 120 mg pure elemental magnesium (29% DV) per capsule to close your daily nutritional shortfall gently and reliably.</span>
+              </div>
+            </div>
+
+            {/* Right Column: 4 Advanced Multi-System Physiological Benefits */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {product.wholeBodyHealth.multiSystemBenefits.map((benefit, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-3xl bg-gradient-to-br from-white via-white to-noventra-sand/20 border border-noventra-gold/25 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-3 group"
+                >
+                  <div className="space-y-2.5">
+                    <div className="w-10 h-10 rounded-xl bg-noventra-forest text-noventra-gold flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+                      {idx === 0 && <BatteryCharging className="w-5 h-5" />}
+                      {idx === 1 && <HeartPulse className="w-5 h-5" />}
+                      {idx === 2 && <Activity className="w-5 h-5" />}
+                      {idx === 3 && <Wind className="w-5 h-5" />}
+                    </div>
+                    <h3 className="text-base font-serif font-bold text-noventra-forest">
+                      {renderWithFootnotes(benefit.title)}
+                    </h3>
+                    <p className="text-xs text-gray-600 leading-relaxed font-light">
+                      {renderWithFootnotes(benefit.desc)}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-gray-100 text-[10px] text-noventra-leaf font-semibold flex items-center gap-1 uppercase tracking-wider">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Whole-Body Mineral Pathway</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+        </section>
+      )}
 
       {/* 3. PRODUCT EDUCATION: 5 STAGGERED EDUCATIONAL CARDS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -423,11 +827,11 @@ export default function MagnesiumPage() {
                 </div>
 
                 <h3 className="font-serif font-bold text-xl text-noventra-forest">
-                  {card.title}
+                  {renderWithFootnotes(card.title)}
                 </h3>
 
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
-                  {card.content}
+                  {renderWithFootnotes(card.content)}
                 </p>
               </div>
 
@@ -455,7 +859,7 @@ export default function MagnesiumPage() {
                 How to Integrate Magnesium Glycinate Into Your Evening
               </h3>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-                Take one capsule daily with 8 oz of water. Most individuals prefer taking magnesium alongside dinner or during their evening wind-down routine to support neuromuscular relaxation.
+                {renderWithFootnotes('Take one capsule daily with 8 oz of water. Most individuals prefer taking magnesium alongside dinner or during their evening wind-down routine to support neuromuscular relaxation.‡')}
               </p>
             </div>
 

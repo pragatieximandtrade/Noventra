@@ -21,6 +21,7 @@ import GoldenHaloCanvas from '../components/3d/GoldenHaloCanvas';
 import MolecularCanvas from '../components/3d/MolecularCanvas';
 import AmazonButton from '../components/common/AmazonButton';
 import SupplementFactsModal from '../components/common/SupplementFactsModal';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function HomePage() {
   const [selectedProductModal, setSelectedProductModal] = useState(null);
@@ -51,7 +52,7 @@ export default function HomePage() {
             {/* Top Brand Tagline Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-noventra-gold/30 shadow-sm backdrop-blur-sm text-noventra-forest text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-noventra-gold" />
-              <span>Thoughtfully Formulated • Transparently Presented</span>
+              <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹ • Thoughtfully Formulated')}</span>
             </div>
 
             {/* Main Headline */}
@@ -234,16 +235,16 @@ export default function HomePage() {
               </div>
 
               <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-                {mag.description}
+                {renderWithFootnotes(mag.description)}
               </p>
 
               {/* Highlight Badges */}
               <div className="grid grid-cols-2 gap-3 py-2">
                 {mag.highlights.map((h, i) => (
                   <div key={i} className="p-3 rounded-xl bg-white border border-noventra-sand-200 shadow-sm">
-                    <div className="text-xs text-gray-500">{h.label}</div>
-                    <div className="text-base font-serif font-bold text-noventra-forest">{h.value}</div>
-                    <div className="text-[10px] text-noventra-leaf font-medium">{h.sub}</div>
+                    <div className="text-xs text-gray-500">{renderWithFootnotes(h.label)}</div>
+                    <div className="text-base font-serif font-bold text-noventra-forest">{renderWithFootnotes(h.value)}</div>
+                    <div className="text-[10px] text-noventra-leaf font-medium">{renderWithFootnotes(h.sub)}</div>
                   </div>
                 ))}
               </div>
@@ -282,7 +283,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 space-y-6 order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-noventra-dark text-xs font-semibold">
                 <Zap className="w-3.5 h-3.5 text-amber-600" />
-                <span>{glut.badgeTitle} • 5-Nutrient Synergy</span>
+                <span>{renderWithFootnotes(glut.badgeTitle)} • 5-Nutrient Synergy</span>
               </div>
 
               <div>
@@ -295,16 +296,16 @@ export default function HomePage() {
               </div>
 
               <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-                {glut.description}
+                {renderWithFootnotes(glut.description)}
               </p>
 
               {/* Highlight Badges */}
               <div className="grid grid-cols-2 gap-3 py-2">
                 {glut.highlights.map((h, i) => (
                   <div key={i} className="p-3 rounded-xl bg-white border border-noventra-sand-200 shadow-sm">
-                    <div className="text-xs text-gray-500">{h.label}</div>
-                    <div className="text-base font-serif font-bold text-noventra-forest">{h.value}</div>
-                    <div className="text-[10px] text-noventra-leaf font-medium">{h.sub}</div>
+                    <div className="text-xs text-gray-500">{renderWithFootnotes(h.label)}</div>
+                    <div className="text-base font-serif font-bold text-noventra-forest">{renderWithFootnotes(h.value)}</div>
+                    <div className="text-[10px] text-noventra-leaf font-medium">{renderWithFootnotes(h.sub)}</div>
                   </div>
                 ))}
               </div>
@@ -381,13 +382,13 @@ export default function HomePage() {
                 {comparisonData.rows.map((row, idx) => (
                   <tr key={idx} className="hover:bg-noventra-sand/30 transition-colors">
                     <td className="py-3.5 px-4 font-semibold text-gray-700">
-                      {row.feature}
+                      {renderWithFootnotes(row.feature)}
                     </td>
                     <td className="py-3.5 px-4 text-noventra-forest bg-noventra-sand/20 font-medium">
-                      {row.magnesium}
+                      {renderWithFootnotes(row.magnesium)}
                     </td>
                     <td className="py-3.5 px-4 text-noventra-forest bg-amber-50/20 font-medium">
-                      {row.glutathione}
+                      {renderWithFootnotes(row.glutathione)}
                     </td>
                   </tr>
                 ))}

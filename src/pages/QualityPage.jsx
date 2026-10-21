@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { brandInfo, fdaDisclaimer } from '../data/products';
 import AmazonButton from '../components/common/AmazonButton';
+import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function QualityPage() {
   const standards = [
@@ -102,19 +103,10 @@ export default function QualityPage() {
             "No Gluten or Dairy"
           ].map((item, idx) => (
             <div key={idx} className="p-4 rounded-2xl bg-noventra-sand border border-noventra-sand-200 text-xs font-semibold text-noventra-forest">
-              {item}
+              {renderWithFootnotes(item)}
             </div>
           ))}
         </div>
-      </section>
-
-      {/* FDA Notice Box */}
-      <section className="p-6 rounded-2xl bg-amber-50/90 border border-amber-200 text-xs text-amber-900 leading-relaxed max-w-4xl mx-auto">
-        <strong className="block text-sm uppercase tracking-wider mb-1 font-bold">Regulatory & Safety Standard:</strong>
-        <p className="italic mb-2">{fdaDisclaimer}</p>
-        <p className="text-gray-600">
-          Our products are manufactured in accordance with strict dietary supplement quality standards. Consult your healthcare provider before beginning any supplement routine.
-        </p>
       </section>
 
       {/* Action Banner */}
