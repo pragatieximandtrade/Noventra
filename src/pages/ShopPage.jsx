@@ -15,13 +15,13 @@ export default function ShopPage() {
   const productList = [
     {
       ...products.magnesium,
-      tag: 'relaxation',
-      tagLabel: 'Everyday Relaxation & Energy'
+      tag: 'magnesium',
+      tagLabel: '100% Pure Chelated'
     },
     {
       ...products.glutathione,
-      tag: 'antioxidant',
-      tagLabel: 'Cellular Antioxidant Complex'
+      tag: 'glutathione',
+      tagLabel: 'Advanced Liposomal Matrix'
     }
   ];
 
@@ -39,7 +39,7 @@ export default function ShopPage() {
           <span>The Complete Collection</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-serif font-bold text-noventra-forest">
-          Explore Noventra Formulations
+          Explore AMG Nutra Formulations
         </h1>
         <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
           Pure, bioavailable dietary supplements formulated with full label transparency and fulfilled directly through Amazon Prime.
@@ -59,46 +59,47 @@ export default function ShopPage() {
           All Products (2)
         </button>
         <button
-          onClick={() => setFilter('relaxation')}
+          onClick={() => setFilter('magnesium')}
           className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all ${
-            filter === 'relaxation'
+            filter === 'magnesium'
               ? 'bg-noventra-forest text-white shadow-md'
               : 'bg-white text-noventra-dark hover:bg-noventra-sand border border-noventra-sand-200'
           }`}
         >
-          Magnesium Chelate
+          Magnesium Glycinate
         </button>
         <button
-          onClick={() => setFilter('antioxidant')}
+          onClick={() => setFilter('glutathione')}
           className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all ${
-            filter === 'antioxidant'
+            filter === 'glutathione'
               ? 'bg-noventra-forest text-white shadow-md'
               : 'bg-white text-noventra-dark hover:bg-noventra-sand border border-noventra-sand-200'
           }`}
         >
-          Antioxidant Complex
+          L-Glutathione
         </button>
       </div>
 
       {/* Product Cards Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
         {filtered.map((prod) => (
           <motion.div
             key={prod.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl border border-noventra-gold/30 shadow-xl overflow-hidden flex flex-col justify-between hover:border-noventra-gold transition-all duration-300 group"
+            className="bg-white rounded-3xl border border-noventra-gold/30 shadow-xl overflow-hidden flex flex-col justify-between hover:border-noventra-gold transition-all duration-300 group h-full"
           >
-            {/* Top Showcase with 3D Bottle */}
-            <div className="p-8 bg-gradient-to-b from-noventra-sand/60 to-white flex items-center justify-center min-h-[360px] relative">
-              <div className="absolute top-4 left-4">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white border border-noventra-gold/30 text-noventra-leaf shadow-sm">
-                  {prod.tagLabel}
+            {/* Top Showcase with 3D Bottle (Strictly synchronized height with generous top & bottom breathing room) */}
+            <div className="h-[460px] sm:h-[500px] p-6 sm:p-8 bg-gradient-to-b from-noventra-sand/60 via-noventra-sand/20 to-white flex items-center justify-center relative overflow-hidden flex-shrink-0">
+              <div className="absolute top-5 left-5 z-20">
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-noventra-gold/30 text-noventra-leaf shadow-sm">
+                  <Sparkles className="w-3 h-3 text-noventra-gold" />
+                  <span>{prod.tagLabel}</span>
                 </span>
               </div>
-              <div className="relative z-10">
-                <ProductBottle3D type={prod.id === 'magnesium-glycinate' ? 'magnesium' : 'glutathione'} scale={0.95} />
+              <div className="relative z-10 flex items-center justify-center py-4">
+                <ProductBottle3D type={prod.id === 'magnesium-glycinate' ? 'magnesium' : 'glutathione'} scale={0.72} />
               </div>
             </div>
 
@@ -117,7 +118,7 @@ export default function ShopPage() {
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-light min-h-[48px] sm:min-h-[56px]">
                   {renderWithFootnotes(prod.description)}
                 </p>
 

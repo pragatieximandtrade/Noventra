@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="lg:col-span-6 space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-noventra-gold/10 border border-noventra-gold/30 text-amber-300 text-xs font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>The Noventra Newsletter</span>
+                <span>The AMG Nutra Newsletter</span>
               </div>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
                 Wellness Education. No Spam. No Hype.
@@ -47,7 +47,7 @@ export default function Footer() {
               {subscribed ? (
                 <div className="flex items-center gap-3 p-4 rounded-2xl bg-noventra-leaf/20 border border-noventra-leaf/40 text-emerald-300 text-sm">
                   <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Thank you for joining Noventra. Check your inbox for welcome insights.</span>
+                  <span>Thank you for joining AMG Nutra. Check your inbox for welcome insights.</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
@@ -89,7 +89,7 @@ export default function Footer() {
               <div className="p-3 bg-white rounded-xl inline-block shadow-md">
                 <img
                   src="/logo.png"
-                  alt="NOVENTRA"
+                  alt="AMG NUTRA"
                   className="h-10 w-auto object-contain"
                 />
               </div>
@@ -103,7 +103,7 @@ export default function Footer() {
             <div className="pt-2">
               <AmazonButton
                 url={brandInfo.amazonStoreUrl}
-                productName="Noventra Amazon Store"
+                productName="AMG Nutra Amazon Store"
                 size="sm"
                 variant="gold"
               />
@@ -143,7 +143,7 @@ export default function Footer() {
                   to="/shop"
                   className="inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200 font-medium"
                 >
-                  <span>Compare Formulations</span>
+                  <span>All Products</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </li>
@@ -158,7 +158,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-noventra-sand-200/80">
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">
-                  About Noventra
+                  About AMG Nutra
                 </Link>
               </li>
               <li>
@@ -190,7 +190,7 @@ export default function Footer() {
               Purchasing & Trust
             </h4>
             <p className="text-xs text-noventra-sand-200/70 leading-relaxed">
-              Official Noventra formulations are stored and fulfilled via Amazon Prime for temperature-controlled storage and rapid 1-2 day delivery.
+              Official AMG Nutra formulations are stored and fulfilled via Amazon Prime for temperature-controlled storage and rapid 1-2 day delivery.
             </p>
             <div className="flex flex-wrap gap-2 pt-1 text-[11px] text-gray-300">
               <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10">100% Vegetarian</span>
@@ -207,7 +207,7 @@ export default function Footer() {
         {/* Copyright & Legal Sub-Footer */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400 pt-4">
           <div>
-            © {new Date().getFullYear()} NOVENTRA. All rights reserved.
+            © {new Date().getFullYear()} AMG NUTRA. All rights reserved.
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <Link to="/privacy" className="hover:text-white transition-colors">

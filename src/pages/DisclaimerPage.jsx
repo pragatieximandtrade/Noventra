@@ -16,7 +16,7 @@ export default function DisclaimerPage() {
           FDA Dietary Supplement Disclaimer
         </h1>
         <p className="text-xs text-gray-500">
-          Applicable to all NOVENTRA Formulations & Web Pages
+          Applicable to all AMG NUTRA Formulations & Web Pages
         </p>
       </div>
 

@@ -6,7 +6,8 @@ export default function ProductBottle3D({
   type = 'magnesium', // 'magnesium' | 'glutathione'
   className = '',
   enableTilt = true,
-  scale = 1
+  scale = 1,
+  loading = 'lazy'
 }) {
   const isMag = type === 'magnesium';
   const cardRef = useRef(null);
@@ -79,7 +80,7 @@ export default function ProductBottle3D({
 
             <img
               src="/glutathione-bottle.png"
-              alt="Noventra Liposomal Glutathione"
+              alt="AMG Nutra Liposomal Glutathione"
               className="relative z-10 w-full h-auto max-h-[460px] sm:max-h-[500px] object-contain pointer-events-none select-none"
               style={{
                 imageRendering: '-webkit-optimize-contrast',
@@ -88,7 +89,8 @@ export default function ProductBottle3D({
                 transform: 'translateZ(0)',
                 willChange: 'transform'
               }}
-              loading="eager"
+              loading={loading}
+              decoding="async"
             />
           </div>
         ) : (
@@ -125,11 +127,11 @@ export default function ProductBottle3D({
                 <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-noventra-gold-dark via-noventra-gold-light to-noventra-gold" />
                 <div className="absolute bottom-0 inset-x-0 h-1.5 bg-gradient-to-r from-noventra-gold-dark via-noventra-gold-light to-noventra-gold" />
 
-                {/* Label Top: Noventra Brand Logo */}
+                {/* Label Top: Brand Logo */}
                 <div className="flex flex-col items-center pt-1">
                   <img
                     src="/logo.png"
-                    alt="NOVENTRA"
+                    alt="AMG NUTRA"
                     className="h-7 sm:h-8 w-auto object-contain filter drop-shadow-sm"
                   />
                   <div className="text-[7.5px] uppercase tracking-[0.25em] text-amber-600 font-bold mt-0.5">

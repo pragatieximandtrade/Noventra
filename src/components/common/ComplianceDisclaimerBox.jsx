@@ -30,19 +30,6 @@ export default function ComplianceDisclaimerBox({ variant = 'forest', className 
                 isSand ? 'text-[#a87d15]' : 'text-noventra-gold'
               }`}
             >
-              1.
-            </span>
-            <span>
-              Among U.S. healthcare professionals surveyed who recommend specific professional supplement brands; Nutrition Business Journal® Practitioner Survey 2016, 2020, 2023.
-            </span>
-          </p>
-
-          <p className="leading-normal flex items-start">
-            <span
-              className={`inline-flex items-center justify-center text-[10px] font-bold mr-2 min-w-[14px] leading-none pt-0.5 select-none ${
-                isSand ? 'text-[#a87d15]' : 'text-noventra-gold'
-              }`}
-            >
               †
             </span>
             <span>

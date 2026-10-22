@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
         <section className="space-y-2">
           <h2 className="text-lg font-serif font-bold text-noventra-forest">1. Introduction</h2>
           <p>
-            NOVENTRA ("we," "our," or "us") respects your privacy and is committed to protecting the personal information you may provide while visiting our brand website. This Privacy Policy explains how information is collected, used, and protected when you access our digital properties.
+            AMG NUTRA ("we," "our," or "us") respects your privacy and is committed to protecting the personal information you may provide while visiting our brand website. This Privacy Policy explains how information is collected, used, and protected when you access our digital properties.
           </p>
         </section>
 
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
         <section className="space-y-2">
           <h2 className="text-lg font-serif font-bold text-noventra-forest">3. Amazon Fulfillment & Third-Party Purchases</h2>
           <p>
-            Our website redirects users to Amazon for product purchases. When you navigate to Amazon via our links, your transaction, payment details, and shipping address are governed entirely by Amazon’s Privacy Notice and Conditions of Use. Noventra does not collect or store your payment card numbers on this website.
+            Our website redirects users to Amazon for product purchases. When you navigate to Amazon via our links, your transaction, payment details, and shipping address are governed entirely by Amazon’s Privacy Notice and Conditions of Use. AMG Nutra does not collect or store your payment card numbers on this website.
           </p>
         </section>
 

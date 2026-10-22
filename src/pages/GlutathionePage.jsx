@@ -31,6 +31,7 @@ import SupplementFactsModal from '../components/common/SupplementFactsModal';
 import CoaModal from '../components/common/CoaModal';
 import CoaSection from '../components/common/CoaSection';
 import ComparisonSection from '../components/common/ComparisonSection';
+import ProductRelatedArticles from '../components/common/ProductRelatedArticles';
 import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function GlutathionePage() {
@@ -179,10 +180,6 @@ export default function GlutathionePage() {
               <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
                 <FlaskConical className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>Third-Party Lab Tested</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
-                <Award className="w-3.5 h-3.5 text-amber-600" />
-                <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹')}</span>
               </span>
               <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
                 <Award className="w-3.5 h-3.5 text-amber-600" />
@@ -549,7 +546,7 @@ export default function GlutathionePage() {
               Purity, Bioavailability & Rigorous Testing
             </h3>
             <p className="text-xs sm:text-sm text-noventra-sand-200/85 leading-relaxed font-light">
-              {renderWithFootnotes('Every batch of Noventra Liposomal Glutathione is engineered with precision active dosages, verified cofactor synergy, third-party lab tested, and manufactured in a cGMP certified facility and USFDA approved plant under rigorous quality controls.', true)}
+              {renderWithFootnotes('Every batch of AMG Nutra Liposomal Glutathione is engineered with precision active dosages, verified cofactor synergy, third-party lab tested, and manufactured in a cGMP certified facility and USFDA approved plant under rigorous quality controls.', true)}
             </p>
           </div>
 
@@ -760,7 +757,10 @@ export default function GlutathionePage() {
         onOpenCoa={() => setCoaModalOpen(true)}
       />
 
-      {/* 7. PRODUCT FAQ ACCORDION */}
+      {/* 7. RELATED SCIENCE & CLINICAL RESEARCH ARTICLES (TOP 3) */}
+      <ProductRelatedArticles productId="glutathione" />
+
+      {/* 8. PRODUCT FAQ ACCORDION */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="text-center space-y-2">
           <span className="text-xs uppercase tracking-widest text-noventra-leaf font-bold">Answers & Clarity</span>

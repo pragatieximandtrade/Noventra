@@ -47,7 +47,7 @@ export default function ComparisonSection({ product }) {
             <div className="flex items-center justify-between mb-1">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold tracking-wider uppercase border border-emerald-400/40">
                 <Check className="w-3 h-3 text-emerald-300" />
-                Noventra Advantage
+                AMG Nutra Advantage
               </span>
               <Award className="w-4 h-4 text-noventra-gold" />
             </div>
@@ -132,13 +132,13 @@ export default function ComparisonSection({ product }) {
               </span>
             </div>
 
-            {/* Noventra Box */}
+            {/* AMG Nutra Box */}
             <div className="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-300 space-y-1.5">
               <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-900">
                 <span className="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px]">
                   ✓
                 </span>
-                <span>Noventra Standard:</span>
+                <span>AMG Nutra Standard:</span>
               </div>
               <div className="text-xs font-bold text-noventra-forest">
                 {renderWithFootnotes(row.noventra)}
@@ -175,7 +175,7 @@ export default function ComparisonSection({ product }) {
           </div>
           <div>
             <h4 className="font-serif font-bold text-base sm:text-lg text-white">
-              The Noventra Formulation Guarantee
+              The AMG Nutra Formulation Guarantee
             </h4>
             <p className="text-xs sm:text-sm text-noventra-sand-200/90 font-light mt-0.5">
               Exact elemental weights, bioavailable forms, third-party lab tested, and manufactured in a cGMP certified facility and USFDA approved plant on every batch.

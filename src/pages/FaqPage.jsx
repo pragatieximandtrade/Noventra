@@ -11,7 +11,7 @@ export default function FaqPage() {
   const faqs = [
     {
       category: 'magnesium',
-      q: "What makes Noventra Magnesium Glycinate gentle on digestion?",
+      q: "What makes AMG Nutra Magnesium Glycinate gentle on digestion?",
       a: "Magnesium Glycinate binds elemental magnesium to the amino acid glycine. Unlike inorganic forms (such as magnesium oxide) which draw water into the digestive tract and can cause loose stools, glycinate is absorbed intact via peptide/amino acid pathways, resulting in superior tolerability."
     },
     {
@@ -31,7 +31,7 @@ export default function FaqPage() {
     },
     {
       category: 'glutathione',
-      q: "What supporting nutrients are included in Noventra Liposomal Glutathione?",
+      q: "What supporting nutrients are included in AMG Nutra Liposomal Glutathione?",
       a: "Our formula includes Vitamin C (50 mg / 56% DV), Riboflavin B2 (5 mg / 385% DV), Selenium (55 mcg / 100% DV), and Resveratrol (100 mg from Polygonum cuspidatum root) to support synergistic antioxidant and metabolic cellular pathways."
     },
     {
@@ -41,17 +41,17 @@ export default function FaqPage() {
     },
     {
       category: 'purchasing',
-      q: "Why does Noventra sell through Amazon?",
+      q: "Why does AMG Nutra sell through Amazon?",
       a: "Selling through our official Amazon Storefront enables our customers to enjoy temperature-controlled storage, 1-2 day Amazon Prime delivery across the US, transparent buyer reviews, and 30-day hassle-free customer protection."
     },
     {
       category: 'general',
-      q: "Are Noventra capsules 100% vegetarian?",
-      a: "Yes. Both Noventra Magnesium Glycinate and Liposomal Glutathione use plant-derived vegetable cellulose capsules and are free from animal gelatin, artificial dyes, and harsh chemical binders."
+      q: "Are AMG Nutra capsules 100% vegetarian?",
+      a: "Yes. Both AMG Nutra Magnesium Glycinate and Liposomal Glutathione use plant-derived vegetable cellulose capsules and are free from animal gelatin, artificial dyes, and harsh chemical binders."
     },
     {
       category: 'general',
-      q: "Are Noventra supplements evaluated by the FDA?",
+      q: "Are AMG Nutra supplements evaluated by the FDA?",
       a: `In accordance with federal dietary supplement law: ${fdaDisclaimer} Dietary supplements do not require pre-market FDA approval, but our products comply strictly with dietary supplement regulations and labeling guidelines.`
     }
   ];
@@ -149,7 +149,7 @@ export default function FaqPage() {
           For fast order tracking, Prime delivery questions, or returns, please access your Amazon account or reach out to our customer care team.
         </p>
         <div className="pt-2">
-          <AmazonButton url={brandInfo.amazonStoreUrl} productName="Noventra Amazon Storefront" size="md" variant="primary" />
+          <AmazonButton url={brandInfo.amazonStoreUrl} productName="AMG Nutra Amazon Storefront" size="md" variant="primary" />
         </div>
       </div>
 

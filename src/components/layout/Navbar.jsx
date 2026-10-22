@@ -55,7 +55,7 @@ export default function Navbar() {
         },
         {
           name: 'Explore All Products',
-          sub: 'Side-by-side comparison',
+          sub: 'View complete collection',
           path: '/shop',
           isShopAll: true
         }
@@ -88,7 +88,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2 group">
             <img
               src="/logo.png"
-              alt="NOVENTRA"
+              alt="AMG NUTRA"
               className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
@@ -193,7 +193,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <AmazonButton
               url={brandInfo.amazonStoreUrl}
-              productName="Noventra Store"
+              productName="AMG Nutra Store"
               size="sm"
               variant="primary"
             />
@@ -237,7 +237,7 @@ export default function Navbar() {
                 to="/about"
                 className="text-lg font-serif font-bold text-noventra-forest hover:text-noventra-leaf py-1 border-b border-gray-100"
               >
-                About Noventra
+                About AMG Nutra
               </Link>
 
               {/* Mobile Product Section */}
@@ -308,7 +308,7 @@ export default function Navbar() {
               <div className="pt-4 border-t border-gray-200 flex flex-col gap-2.5">
                 <AmazonButton
                   url={brandInfo.amazonStoreUrl}
-                  productName="Noventra Store"
+                  productName="AMG Nutra Store"
                   size="md"
                   className="w-full"
                 />

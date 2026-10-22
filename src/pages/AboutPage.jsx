@@ -24,7 +24,7 @@ export default function AboutPage() {
       <section className="text-center space-y-6 pt-6 max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-noventra-gold/30 shadow-sm text-noventra-forest text-xs font-semibold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5 text-noventra-gold" />
-          <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹ • About Noventra')}</span>
+          <span>About AMG Nutra • Pure Wellness Integrity</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-noventra-forest leading-tight">
@@ -40,7 +40,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* 2. THE NOVENTRA PHILOSOPHY & STORY */}
+      {/* 2. THE AMG NUTRA PHILOSOPHY & STORY */}
       <section className="bg-white rounded-3xl p-8 sm:p-12 md:p-16 border border-noventra-gold/25 shadow-xl space-y-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -48,7 +48,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5 flex flex-col items-center justify-center p-8 bg-gradient-to-b from-noventra-sand/70 to-white rounded-2xl border border-noventra-gold/30 shadow-inner text-center space-y-6">
             <img
               src="/logo.png"
-              alt="NOVENTRA"
+              alt="AMG NUTRA"
               className="h-16 w-auto object-contain drop-shadow-sm"
             />
             <div className="space-y-1">
@@ -97,7 +97,7 @@ export default function AboutPage() {
             The Foundation
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-noventra-forest">
-            Four Pillars of Every Noventra Bottle
+            Four Pillars of Every AMG Nutra Bottle
           </h2>
         </div>
 
@@ -163,12 +163,12 @@ export default function AboutPage() {
               Official Storefront on Amazon
             </h3>
             <p className="text-sm text-noventra-sand-200/85 leading-relaxed font-light">
-              All authentic Noventra formulations are stored in climate-controlled facilities and fulfilled directly via Amazon Prime for guaranteed freshness and fast doorstep arrival.
+              All authentic AMG Nutra formulations are stored in climate-controlled facilities and fulfilled directly via Amazon Prime for guaranteed freshness and fast doorstep arrival.
             </p>
           </div>
           <AmazonButton
             url={brandInfo.amazonStoreUrl}
-            productName="Noventra Amazon Collection"
+            productName="AMG Nutra Amazon Collection"
             size="lg"
             variant="gold"
           />

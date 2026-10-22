@@ -28,7 +28,7 @@ export default function CoaSection({ product, onOpenCoa }) {
           Certificate of Analysis (COA)
         </h2>
         <p className="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
-          True quality requires zero guesswork. Every batch of Noventra is independently third-party lab tested by an ISO/IEC 17025 accredited laboratory to verify active potency, heavy metals safety, and microbiological purity before reaching your hands.
+          True quality requires zero guesswork. Every batch of AMG Nutra is independently third-party lab tested by an ISO/IEC 17025 accredited laboratory to verify active potency, heavy metals safety, and microbiological purity before reaching your hands.
         </p>
       </div>
 

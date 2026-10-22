@@ -86,7 +86,7 @@ export default function QualityPage() {
             The Clean Standard
           </span>
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-noventra-forest">
-            What Noventra Leaves Out
+            What AMG Nutra Leaves Out
           </h3>
           <p className="text-xs sm:text-sm text-gray-600 font-light">
             We hold ourselves to a strict non-compromise standard regarding unnecessary additives.
@@ -115,7 +115,7 @@ export default function QualityPage() {
         <p className="text-sm text-noventra-sand-200/80 max-w-xl mx-auto font-light">
           Browse our complete catalog on Amazon with official Prime fulfillment and hassle-free protection.
         </p>
-        <AmazonButton url={brandInfo.amazonStoreUrl} productName="Noventra Amazon Collection" size="lg" variant="gold" />
+        <AmazonButton url={brandInfo.amazonStoreUrl} productName="AMG Nutra Amazon Collection" size="lg" variant="gold" />
       </section>
 
     </div>

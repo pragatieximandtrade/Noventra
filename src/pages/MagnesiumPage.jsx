@@ -33,6 +33,7 @@ import SupplementFactsModal from '../components/common/SupplementFactsModal';
 import CoaModal from '../components/common/CoaModal';
 import CoaSection from '../components/common/CoaSection';
 import ComparisonSection from '../components/common/ComparisonSection';
+import ProductRelatedArticles from '../components/common/ProductRelatedArticles';
 import { renderWithFootnotes } from '../components/common/FootnoteSup';
 
 export default function MagnesiumPage() {
@@ -157,10 +158,6 @@ export default function MagnesiumPage() {
               <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
                 <FlaskConical className="w-3.5 h-3.5 text-noventra-leaf" />
                 <span>Third-Party Lab Tested</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
-                <Award className="w-3.5 h-3.5 text-amber-600" />
-                <span>{renderWithFootnotes('Recommended by Healthcare Professionals¹')}</span>
               </span>
               <span className="inline-flex items-center gap-1.5 font-semibold text-noventra-forest bg-emerald-50 border border-noventra-leaf/30 px-3 py-1.5 rounded-full shadow-xs">
                 <Award className="w-3.5 h-3.5 text-amber-600" />
@@ -751,7 +748,7 @@ export default function MagnesiumPage() {
 
               <div className="p-3.5 rounded-xl bg-emerald-50 border border-noventra-leaf/30 text-[11px] text-noventra-forest flex items-center gap-2.5">
                 <ShieldCheck className="w-5 h-5 text-noventra-leaf flex-shrink-0" />
-                <span>Noventra delivers 120 mg pure elemental magnesium (29% DV) per capsule to close your daily nutritional shortfall gently and reliably.</span>
+                <span>AMG Nutra delivers 120 mg pure elemental magnesium (29% DV) per capsule to close your daily nutritional shortfall gently and reliably.</span>
               </div>
             </div>
 
@@ -837,7 +834,7 @@ export default function MagnesiumPage() {
 
               <div className="pt-2 border-t border-gray-100 flex items-center gap-1.5 text-[11px] text-noventra-leaf font-semibold">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Noventra Quality Standard</span>
+                <span>AMG Nutra Quality Standard</span>
               </div>
             </motion.div>
           ))}
@@ -887,7 +884,10 @@ export default function MagnesiumPage() {
         onOpenCoa={() => setCoaModalOpen(true)}
       />
 
-      {/* 6. PRODUCT FAQ ACCORDION */}
+      {/* 6. RELATED SCIENCE & CLINICAL RESEARCH ARTICLES (TOP 3) */}
+      <ProductRelatedArticles productId="magnesium" />
+
+      {/* 7. PRODUCT FAQ ACCORDION */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="text-center space-y-2">
           <span className="text-xs uppercase tracking-widest text-noventra-leaf font-bold">Answers & Clarity</span>

@@ -28,7 +28,7 @@ export default function ContactPage() {
           <span>Customer Support & Inquiries</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-serif font-bold text-noventra-forest">
-          Connect With Noventra
+          Connect With AMG Nutra
         </h1>
         <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
           Have an inquiry regarding our formulations, label details, or Amazon availability? Our team is dedicated to providing prompt, accurate support.
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 Message Received
               </h2>
               <p className="text-sm text-gray-600 font-light max-w-md mx-auto">
-                Thank you for reaching out to Noventra. A member of our wellness support team will review your inquiry and respond within 24–48 business hours.
+                Thank you for reaching out to AMG Nutra. A member of our wellness support team will review your inquiry and respond within 24–48 business hours.
               </p>
               <button
                 onClick={() => {
@@ -104,8 +104,8 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 rounded-xl bg-noventra-sand border border-noventra-sand-200 text-noventra-dark text-sm focus:outline-none focus:border-noventra-leaf transition-colors"
                 >
                   <option value="general">General Brand Inquiry</option>
-                  <option value="magnesium">Noventra Magnesium Glycinate</option>
-                  <option value="glutathione">Noventra Liposomal Glutathione</option>
+                  <option value="magnesium">AMG Nutra Magnesium Glycinate</option>
+                  <option value="glutathione">AMG Nutra Liposomal Glutathione</option>
                   <option value="amazon">Amazon Order & Delivery Support</option>
                   <option value="wholesale">Retail & Distribution Partnerships</option>
                 </select>
@@ -164,7 +164,7 @@ export default function ContactPage() {
             <div className="pt-2">
               <AmazonButton
                 url={brandInfo.amazonStoreUrl}
-                productName="Noventra Amazon Portal"
+                productName="AMG Nutra Amazon Portal"
                 size="sm"
                 variant="gold"
               />

@@ -1,20 +1,20 @@
 /**
- * NOVENTRA Centralized Product & Brand Configuration
+ * AMG NUTRA Centralized Product & Brand Configuration
  * Contains exact product label info, supplement facts, educational breakdowns, and Amazon URLs.
  */
 
 export const brandInfo = {
-  name: "NOVENTRA",
+  name: "AMG NUTRA",
   tagline: "Elevate Your Everyday Wellness.",
   philosophy: "Thoughtfully formulated. Transparently presented. Designed for your daily wellness journey.",
   address: "500 Horizon Drive, Suite 540, Robbinsville, NJ 08691, USA",
-  website: "www.noventra.com",
+  website: "www.amgnutra.com",
   about: {
-    hero: "At Noventra, we believe in mindful supplementation rooted in transparency, quality-conscious sourcing, and ingredient integrity.",
+    hero: "At AMG Nutra, we believe in mindful supplementation rooted in transparency, quality-conscious sourcing, and ingredient integrity.",
     paragraphs: [
       "Modern wellness doesn't require exaggerated claims or artificial hype. It requires thoughtful formulations designed with bioavailable nutrient forms, accurate labeling, and rigorous manufacturing standards.",
-      "Noventra was established on a simple, unwavering philosophy: what goes on the label is precisely what goes into the bottle. Every batch is crafted with meticulous attention to detail, prioritizing purity, dietary suitability, and consumer trust.",
-      "Whether you are supporting everyday neuromuscular relaxation with our high-purity Magnesium Glycinate or fortifying your cellular antioxidant intake with our Liposomal Glutathione complex, Noventra stands beside you as a transparent partner in your daily health ritual."
+      "AMG Nutra was established on a simple, unwavering philosophy: what goes on the label is precisely what goes into the bottle. Every batch is crafted with meticulous attention to detail, prioritizing purity, dietary suitability, and consumer trust.",
+      "Whether you are supporting everyday neuromuscular relaxation with our high-purity Magnesium Glycinate or fortifying your cellular antioxidant intake with our Liposomal Glutathione complex, AMG Nutra stands beside you as a transparent partner in your daily health ritual."
     ],
     pillars: [
       {
@@ -39,16 +39,16 @@ export const brandInfo = {
       }
     ]
   },
-  amazonStoreUrl: "https://www.amazon.com/stores/Noventra/page/NOVENTRA_STORE_MAIN"
+  amazonStoreUrl: "https://www.amazon.com/stores/AMGNutra/page/AMG_NUTRA_STORE_MAIN"
 };
 
 export const products = {
   magnesium: {
     id: "magnesium-glycinate",
     slug: "magnesium-glycinate",
-    name: "Noventra Magnesium Glycinate",
+    name: "AMG Nutra Magnesium Glycinate",
     subtitle: "Make Every Day Count.",
-    description: "Discover Noventra Magnesium Glycinate, a thoughtfully presented magnesium supplement designed to complement your everyday wellness routine.†",
+    description: "Discover AMG Nutra Magnesium Glycinate, a thoughtfully presented magnesium supplement designed to complement your everyday wellness routine.†",
     category: "Magnesium Supplement",
     heroBadge: "100% Pure Unbuffered Magnesium Glycinate • Zero Oxide Spiking",
     rating: 4.9,
@@ -57,7 +57,7 @@ export const products = {
     servingsPerContainer: 90,
     supplyDays: "90-Day Supply (3 Months)",
     priceDisplay: "$24.99",
-    amazonUrl: "https://www.amazon.com/dp/B0NOVENTRA_MAG?maas=noventra_web_mag",
+    amazonUrl: "https://www.amazon.com/dp/B0AMGNUTRA_MAG?maas=amgnutra_web_mag",
     themeColor: "emerald",
     haloColor: "rgba(212, 175, 55, 0.4)",
     highlights: [
@@ -118,14 +118,14 @@ export const products = {
       reportCode: "TR-260421-M08-01",
       reportDate: "04.21.2026",
       sampleCode: "260416M0801",
-      sampleName: "Noventra Magnesium Glycinate",
+      sampleName: "AMG Nutra Magnesium Glycinate",
       batchNo: "2026-11842M",
       receivedOn: "04/16/2026",
       testOn: "04/16/2026",
       servingSize: "1 Capsule",
       labDirector: "Dr. Wenjun Wei",
       imageFile: "/coa/noventra-magnesium-coa.png",
-      downloadFileName: "Noventra-Magnesium-Glycinate-COA.png",
+      downloadFileName: "AMG-Nutra-Magnesium-Glycinate-COA.png",
       overallStatus: "CONFORMS / APPROVED",
       summary: "All active assays, heavy metal screenings, and microbiological safety panels strictly conform to USP and FDA standards.",
       highlights: [
@@ -149,12 +149,12 @@ export const products = {
         { test: "Disintegration Time", method: "USP<2040>", claim: "< 15 min", result: "8.5 min", status: "PASS" }
       ]
     },
-    // Noventra vs. Typical Market Brands Comparison
+    // AMG Nutra vs. Typical Market Brands Comparison
     comparison: {
       tagline: "Formulation Integrity",
-      title: "Why Noventra Magnesium Stands Apart",
-      subtitle: "Many commercial magnesium supplements cut corners with poorly absorbed oxide forms and misleading elemental labels. Here is how Noventra compares:*",
-      noventraLabel: "Noventra Magnesium Glycinate",
+      title: "Why AMG Nutra Magnesium Stands Apart",
+      subtitle: "Many commercial magnesium supplements cut corners with poorly absorbed oxide forms and misleading elemental labels. Here is how AMG Nutra compares:*",
+      noventraLabel: "AMG Nutra Magnesium Glycinate",
       othersLabel: "Typical Market Brands",
       features: [
         {
@@ -211,14 +211,14 @@ export const products = {
     // Authoritative Product Details & Paragraph Monograph (Thorne-style comprehensive details)
     productDetails: {
       sectionBadge: "Product Details & Scientific Monograph",
-      title: "Noventra Magnesium Glycinate - 90 Servings Details",
+      title: "AMG Nutra Magnesium Glycinate - 90 Servings Details",
       introParagraphs: [
-        "9 out of 10 consumers reported sleeping better and feeling calmer in stressful moments after supplementing with Noventra Magnesium Glycinate, based on a 28-day consumer perception study of 95 participants. Magnesium plays a critical role in promoting muscle relaxation and maintaining a healthy nervous system – both of which are essential for restful, restorative sleep.‡",
+        "9 out of 10 consumers reported sleeping better and feeling calmer in stressful moments after supplementing with AMG Nutra Magnesium Glycinate, based on a 28-day consumer perception study of 95 participants. Magnesium plays a critical role in promoting muscle relaxation and maintaining a healthy nervous system – both of which are essential for restful, restorative sleep.‡",
         "Beyond sleep, magnesium is fundamental to whole-body health. It’s involved in more than 600 enzymatic reactions in the body, influencing everything from energy production and sugar metabolism to cardiovascular and neuromuscular function.‡",
         "But according to World Health Organization statistics, as many as 75% of U.S. adults do not meet the U.S. Food and Drug Administration's recommended daily intake of 420 mg of magnesium. Magnesium deficiency can manifest in many ways, such as inefficient blood sugar metabolism, muscle cramps or soreness, eyelid twitching, fatigue, and poor sleep."
       ],
       benefits: {
-        title: "Benefits of Noventra Magnesium Glycinate",
+        title: "Benefits of AMG Nutra Magnesium Glycinate",
         items: [
           "Promotes relaxation before bedtime to support restful sleep, helping wake up feeling refreshed and energized‡",
           "Shown in a consumer study to regulate emotional well-being and supports a calm response to everyday stress‡",
@@ -233,7 +233,7 @@ export const products = {
         ]
       },
       features: {
-        title: "Features of Noventra Magnesium Glycinate",
+        title: "Features of AMG Nutra Magnesium Glycinate",
         items: [
           "A single-capsule serving size, designed for customizable dosages that fit your daily needs",
           "Each capsule contains magnesium bound to glycine, a calming neurotransmitter, making Magnesium Glycinate an ideal nighttime mineral supplement‡",
@@ -249,8 +249,8 @@ export const products = {
         ]
       },
       consumerExperience: {
-        title: "What did people experience when using Noventra Magnesium Glycinate?",
-        intro: "In a 28-day consumer perception study, 95 adults who were not previously supplementing with magnesium added Noventra Magnesium Glycinate to their nightly routine. By the end of the study, participants reported noticeable improvements in sleep, relaxation, and overall well-being.",
+        title: "What did people experience when using AMG Nutra Magnesium Glycinate?",
+        intro: "In a 28-day consumer perception study, 95 adults who were not previously supplementing with magnesium added AMG Nutra Magnesium Glycinate to their nightly routine. By the end of the study, participants reported noticeable improvements in sleep, relaxation, and overall well-being.",
         reportedTitle: "What participants reported:",
         stats: [
           { percent: "91%", text: "experienced improved sleep quality" },
@@ -270,8 +270,8 @@ export const products = {
     consumerStudy: {
       tagline: "Consumer Perception Study",
       headline: "Real Results: What People Experienced",
-      subtitle: "In a 28-day consumer perception study, 95 adults who added Noventra Magnesium Glycinate to their nightly routine reported noticeable improvements in sleep quality, relaxation, and whole-body well-being.‡",
-      headlineHighlight: "9 out of 10 consumers reported sleeping better and feeling calmer in stressful moments after supplementing with Noventra Magnesium Glycinate.‡",
+      subtitle: "In a 28-day consumer perception study, 95 adults who added AMG Nutra Magnesium Glycinate to their nightly routine reported noticeable improvements in sleep quality, relaxation, and whole-body well-being.‡",
+      headlineHighlight: "9 out of 10 consumers reported sleeping better and feeling calmer in stressful moments after supplementing with AMG Nutra Magnesium Glycinate.‡",
       metrics: [
         {
           percent: "91%",
@@ -301,7 +301,7 @@ export const products = {
         {
           percent: "93%",
           label: "Positive Overall Experience",
-          desc: "Rated Noventra as a superior, indispensable staple in their daily evening health and wellness ritual."
+          desc: "Rated AMG Nutra as a superior, indispensable staple in their daily evening health and wellness ritual."
         }
       ],
       footnote: "Results based on 95 participants in a 28-day consumer perception study. Individual results may vary."
@@ -382,13 +382,13 @@ export const products = {
         {
           title: "Elemental Magnesium vs. Compound Weight",
           icon: "HelpCircle",
-          content: "Transparency matters: many brands market '1000 mg of Magnesium Glycinate' which only yields a fraction of usable mineral. Noventra explicitly guarantees 120 mg of pure, elemental magnesium per single capsule, giving you clear, reliable nutritional precision."
+          content: "Transparency matters: many brands market '1000 mg of Magnesium Glycinate' which only yields a fraction of usable mineral. AMG Nutra explicitly guarantees 120 mg of pure, elemental magnesium per single capsule, giving you clear, reliable nutritional precision."
         }
       ]
     },
     faqList: [
       {
-        q: "What time of day should I take Noventra Magnesium Glycinate?",
+        q: "What time of day should I take AMG Nutra Magnesium Glycinate?",
         a: "Most customers take 1 capsule with their evening meal or 30-60 minutes before winding down for the night, as magnesium glycinate is renowned for supporting muscular relaxation."
       },
       {
@@ -396,19 +396,19 @@ export const products = {
         a: "120 mg provides an optimal 29% of the Daily Value of pure elemental magnesium in a single easy-to-swallow capsule, designed to safely complement dietary magnesium intake without causing gastrointestinal discomfort."
       },
       {
-        q: "Do other brands mix in cheaper forms? Why is Noventra strictly pure Glycinate?",
-        a: "Many brands in the market practice 'buffering'—they write 'Magnesium Glycinate' on the front label, but quietly blend in cheap, poorly absorbed Magnesium Oxide (which absorbs at only ~4%). This is the exact reason why many customers suffer from diarrhea and stomach cramps with other brands. Noventra contains strictly 100% pure Magnesium Glycinate with zero oxide spiking and zero hidden blends."
+        q: "Do other brands mix in cheaper forms? Why is AMG Nutra strictly pure Glycinate?",
+        a: "Many brands in the market practice 'buffering'—they write 'Magnesium Glycinate' on the front label, but quietly blend in cheap, poorly absorbed Magnesium Oxide (which absorbs at only ~4%). This is the exact reason why many customers suffer from diarrhea and stomach cramps with other brands. AMG Nutra contains strictly 100% pure Magnesium Glycinate with zero oxide spiking and zero hidden blends."
       },
       {
-        q: "Why does Noventra Magnesium Glycinate have zero laxative side effects compared to other forms?",
-        a: "A decreased laxative effect occurs because the glycinate form is a true organic bisglycinate chelate that completely envelopes the elemental magnesium within two calming glycine amino acid molecules. Unlike cheap Magnesium Oxide or Citrate that pull excess water into the bowel via osmosis, Noventra is absorbed intact through organic dipeptide channels with maximum gastric comfort."
+        q: "Why does AMG Nutra Magnesium Glycinate have zero laxative side effects compared to other forms?",
+        a: "A decreased laxative effect occurs because the glycinate form is a true organic bisglycinate chelate that completely envelopes the elemental magnesium within two calming glycine amino acid molecules. Unlike cheap Magnesium Oxide or Citrate that pull excess water into the bowel via osmosis, AMG Nutra is absorbed intact through organic dipeptide channels with maximum gastric comfort."
       },
       {
         q: "How does magnesium support heart health and blood pressure?",
         a: "Magnesium regulates the electrical activity of the heart, supporting normal heart rate and steady rhythm. Furthermore, it promotes the dilation of blood vessels (vasodilation), which helps maintain healthy blood pressure within normal ranges and enhances whole-body cardiovascular circulation.*"
       },
       {
-        q: "Is Noventra Magnesium Glycinate vegan?",
+        q: "Is AMG Nutra Magnesium Glycinate vegan?",
         a: "Yes. Our capsules are made strictly from plant-derived cellulose and water, stabilized with ascorbyl palmitate (fat-soluble vitamin C). There is zero animal gelatin or stearate."
       }
     ],
@@ -435,11 +435,11 @@ export const products = {
   glutathione: {
     id: "liposomal-glutathione",
     slug: "liposomal-glutathione",
-    name: "Noventra Liposomal Glutathione",
+    name: "AMG Nutra Liposomal Glutathione",
     badgeTitle: "GLUTATHIONE BASED CAPSULES",
     subtitle: "Thoughtfully Formulated. Naturally Inspired.",
-    aboutProduct: "Noventra Liposomal Glutathione is a premium formulation combining Liposomal Glutathione with essential nutrients to support your daily wellness routine.†",
-    description: "Discover Noventra Liposomal Glutathione, a carefully formulated blend featuring primary L-Glutathione (50%) in combination with Vitamin C, Vitamin B2, Selenium, and Resveratrol to support your daily wellness routine.†",
+    aboutProduct: "AMG Nutra Liposomal Glutathione is a premium formulation combining Liposomal Glutathione with essential nutrients to support your daily wellness routine.†",
+    description: "Discover AMG Nutra Liposomal Glutathione, a carefully formulated blend featuring primary L-Glutathione (50%) in combination with Vitamin C, Vitamin B2, Selenium, and Resveratrol to support your daily wellness routine.†",
     category: "Antioxidant-focused supplement formulation",
     heroBadge: "Primary L-Glutathione Core + 4 Supporting Synergy Nutrients",
     image: "/glutathione-bottle.png",
@@ -450,7 +450,7 @@ export const products = {
     capsuleCount: "60 Vegetarian Capsules",
     supplyDays: "30-Day Supply (1 Month)",
     priceDisplay: "$39.99",
-    amazonUrl: "https://www.amazon.com/dp/B0NOVENTRA_GLUT?maas=noventra_web_glut",
+    amazonUrl: "https://www.amazon.com/dp/B0AMGNUTRA_GLUT?maas=amgnutra_web_glut",
     themeColor: "gold",
     haloColor: "rgba(212, 175, 55, 0.6)",
     highlights: [
@@ -568,14 +568,14 @@ export const products = {
       reportCode: "TR-260421-C11-03",
       reportDate: "04.21.2026",
       sampleCode: "260416C1103",
-      sampleName: "Noventra Glutathione",
+      sampleName: "AMG Nutra Glutathione",
       batchNo: "2026-32314N",
       receivedOn: "04/16/2026",
       testOn: "04/16/2026",
       servingSize: "2 Capsules",
       labDirector: "Dr. Wenjun Wei",
       imageFile: "/coa/noventra-glutathione-coa.png",
-      downloadFileName: "Noventra-Glutathione-COA.png",
+      downloadFileName: "AMG-Nutra-Glutathione-COA.png",
       overallStatus: "CONFORMS / APPROVED",
       summary: "All active nutrient assays, liposomal matrix verification, heavy metal screenings, and microbiological safety panels strictly conform to USP and FDA standards.",
       highlights: [
@@ -600,12 +600,12 @@ export const products = {
         { test: "Resveratrol (from Polygonum cuspidatum Root Extract)", method: "HPLC", claim: "100 mg/S", result: "108 mg/S", status: "PASS" }
       ]
     },
-    // Noventra vs. Typical Market Brands Comparison
+    // AMG Nutra vs. Typical Market Brands Comparison
     comparison: {
       tagline: "Formulation Integrity",
-      title: "Why Noventra Liposomal Glutathione Stands Apart",
-      subtitle: "Oral glutathione is notoriously fragile and readily degraded by stomach enzymes. Here is how Noventra solves bioavailability:*",
-      noventraLabel: "Noventra Liposomal Glutathione",
+      title: "Why AMG Nutra Liposomal Glutathione Stands Apart",
+      subtitle: "Oral glutathione is notoriously fragile and readily degraded by stomach enzymes. Here is how AMG Nutra solves bioavailability:*",
+      noventraLabel: "AMG Nutra Liposomal Glutathione",
       othersLabel: "Standard Glutathione Pills",
       features: [
         {
@@ -655,14 +655,14 @@ export const products = {
     // Authoritative Product Details & Paragraph Monograph (Comprehensive details for Glutathione & Every Ingredient)
     productDetails: {
       sectionBadge: "Product Details & Scientific Monograph",
-      title: "Noventra Liposomal Glutathione - 60 Capsules Details",
+      title: "AMG Nutra Liposomal Glutathione - 60 Capsules Details",
       introParagraphs: [
         "Known in human physiology as the 'master antioxidant', Glutathione is a vital tripeptide synthesized from the amino acids glutamate, cysteine, and glycine. Concentrated primarily within the liver and intracellular compartments, it acts as the primary shield protecting cellular DNA, mitochondrial membranes, and tissues from oxidative stress and environmental toxins.‡",
-        "However, conventional oral glutathione supplements suffer from notoriously poor bioavailability—gastric acid and intestinal peptidase enzymes rapidly break the unprotected tripeptide down into basic amino acids before it can enter circulation. Noventra solves this with Advanced Phospholipid Liposomal Encapsulation, shielding the delicate L-Glutathione molecule inside double-layer lipid spheres that mimic human cell membranes for intact cellular delivery.‡",
-        "Furthermore, glutathione does not operate in isolation. When it neutralizes free radicals, it converts into its oxidized state (GSSG). Noventra formulates primary L-Glutathione alongside four targeted co-actives—Vitamin C, Riboflavin (B2), Selenium, and Resveratrol—to power the continuous enzymatic redox recycling loop, ensuring sustained antioxidant protection throughout your day.‡"
+        "However, conventional oral glutathione supplements suffer from notoriously poor bioavailability—gastric acid and intestinal peptidase enzymes rapidly break the unprotected tripeptide down into basic amino acids before it can enter circulation. AMG Nutra solves this with Advanced Phospholipid Liposomal Encapsulation, shielding the delicate L-Glutathione molecule inside double-layer lipid spheres that mimic human cell membranes for intact cellular delivery.‡",
+        "Furthermore, glutathione does not operate in isolation. When it neutralizes free radicals, it converts into its oxidized state (GSSG). AMG Nutra formulates primary L-Glutathione alongside four targeted co-actives—Vitamin C, Riboflavin (B2), Selenium, and Resveratrol—to power the continuous enzymatic redox recycling loop, ensuring sustained antioxidant protection throughout your day.‡"
       ],
       benefits: {
-        title: "Benefits of Noventra Liposomal Glutathione",
+        title: "Benefits of AMG Nutra Liposomal Glutathione",
         items: [
           "Delivers master cellular antioxidant defense to neutralize free radicals and reactive oxygen species (ROS)‡",
           "Supports Phase II liver detoxification pathways, aiding normal cellular elimination of metabolic waste and environmental pollutants‡",
@@ -677,7 +677,7 @@ export const products = {
         ]
       },
       features: {
-        title: "Features of Noventra Liposomal Glutathione",
+        title: "Features of AMG Nutra Liposomal Glutathione",
         items: [
           "Advanced phospholipid liposomal delivery matrix designed for superior gastrointestinal stability and cellular absorption",
           "Guaranteed 500 mg of pure, active reduced L-Glutathione per 2-capsule daily serving (from 1000 mg standardized liposomal complex)",
@@ -687,7 +687,7 @@ export const products = {
       },
       ingredientsBreakdown: {
         title: "Comprehensive Scientific Breakdown of Every Ingredient",
-        subtitle: "A deeper look at the biochemical mechanisms and precise roles of each active component in the Noventra formula:",
+        subtitle: "A deeper look at the biochemical mechanisms and precise roles of each active component in the AMG Nutra formula:",
         ingredients: [
           {
             name: "Liposomal L-Glutathione (50%)",
@@ -729,7 +729,7 @@ export const products = {
       whyImportant: {
         title: "Why is the Liposomal Redox Network Important?",
         paragraphs: [
-          "Glutathione is the body's ultimate cellular defender, but oral delivery has historically been challenging. When unprotected glutathione is swallowed, digestive enzymes rapidly break it down into its constituent amino acids (cysteine, glycine, glutamate), rendering it ineffective as a whole molecule. Noventra's liposomal spheres envelop the active glutathione in a protective phospholipid bilayer, mirroring human cell membranes to allow seamless intestinal absorption and high cellular bioavailability.‡",
+          "Glutathione is the body's ultimate cellular defender, but oral delivery has historically been challenging. When unprotected glutathione is swallowed, digestive enzymes rapidly break it down into its constituent amino acids (cysteine, glycine, glutamate), rendering it ineffective as a whole molecule. AMG Nutra's liposomal spheres envelop the active glutathione in a protective phospholipid bilayer, mirroring human cell membranes to allow seamless intestinal absorption and high cellular bioavailability.‡",
           "In clinical studies examining glutathione metabolism, researchers observed that combining reduced glutathione with synergistic antioxidant cofactors (such as Vitamin C, selenium, and B2) significantly elevated systemic antioxidant capacity, enhanced natural killer (NK) cell cytotoxicity, and supported markers of liver and skin health compared to isolated glutathione.‡ Long-term studies on polyphenols like Resveratrol further demonstrate sustained microvascular and cellular protection against cumulative oxidative stress.‡"
         ]
       },
@@ -803,12 +803,12 @@ export const products = {
         a: "The liposomal structure wraps 500 mg of pure, active L-Glutathione inside 500 mg of protective phospholipid lipids (total 1000 mg complex). This shields the delicate glutathione peptide from digestive breakdown for superior cellular absorption."
       },
       {
-        q: "How should I take Noventra Liposomal Glutathione?",
+        q: "How should I take AMG Nutra Liposomal Glutathione?",
         a: "Take 2 vegetarian capsules daily with water, preferably alongside a meal or as directed by your healthcare professional."
       },
       {
         q: "Is the product third-party tested and vegan?",
-        a: "Yes. Noventra Liposomal Glutathione is 100% vegetarian/vegan friendly, Non-GMO, Gluten Free, Dairy Free, Soy Free, and third-party lab tested for purity and potency."
+        a: "Yes. AMG Nutra Liposomal Glutathione is 100% vegetarian/vegan friendly, Non-GMO, Gluten Free, Dairy Free, Soy Free, and third-party lab tested for purity and potency."
       }
     ],
     warnings: [
@@ -833,7 +833,7 @@ export const products = {
 };
 
 export const comparisonData = {
-  columns: ["Feature", "Noventra Magnesium Glycinate", "Noventra Liposomal Glutathione"],
+  columns: ["Feature", "AMG Nutra Magnesium Glycinate", "AMG Nutra Liposomal Glutathione"],
   rows: [
     {
       feature: "Product Type",

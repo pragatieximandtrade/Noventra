@@ -199,7 +199,7 @@ export default function CoaModal({ isOpen, onClose, product }) {
                   {/* Header info */}
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-4 border-b-2 border-black">
                     <div>
-                      <h4 className="font-serif font-black text-lg text-black">NOVENTRA LLC</h4>
+                      <h4 className="font-serif font-black text-lg text-black">AMG NUTRA LLC</h4>
                       <p className="text-xs text-gray-600">500 Horizon Drive, Suite 540</p>
                       <p className="text-xs text-gray-600">Robbinsville NJ 08691 USA</p>
                     </div>
@@ -281,7 +281,7 @@ export default function CoaModal({ isOpen, onClose, product }) {
             {/* Modal Footer */}
             <div className="px-6 sm:px-8 py-3.5 bg-gray-50 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
               <span className="text-gray-500 text-[11px]">
-                Noventra guarantees 100% batch transparency. For custom batch inquiries, contact quality@noventra.com.
+                AMG Nutra guarantees 100% batch transparency. For custom batch inquiries, contact quality@amgnutra.com.
               </span>
               <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
                 <a

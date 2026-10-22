@@ -6,7 +6,7 @@ export default function CinematicPreloader({ onFinish }) {
 
   useEffect(() => {
     // Only show preloader on first session visit or quick 1.6s duration
-    const hasSeen = sessionStorage.getItem('noventra_seen_preloader');
+    const hasSeen = sessionStorage.getItem('amgnutra_seen_preloader');
     if (hasSeen) {
       setIsVisible(false);
       onFinish && onFinish();
@@ -15,7 +15,7 @@ export default function CinematicPreloader({ onFinish }) {
 
     const timer = setTimeout(() => {
       setIsVisible(false);
-      sessionStorage.setItem('noventra_seen_preloader', 'true');
+      sessionStorage.setItem('amgnutra_seen_preloader', 'true');
       onFinish && onFinish();
     }, 1600);
 
@@ -48,7 +48,7 @@ export default function CinematicPreloader({ onFinish }) {
             >
               <img
                 src="/logo.png"
-                alt="NOVENTRA"
+                alt="AMG NUTRA"
                 className="h-12 md:h-16 w-auto object-contain filter drop-shadow-sm"
               />
             </motion.div>

@@ -22,7 +22,7 @@ export default function TermsPage() {
         <section className="space-y-2">
           <h2 className="text-lg font-serif font-bold text-noventra-forest">1. Acceptance of Terms</h2>
           <p>
-            By accessing or using the NOVENTRA website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website.
+            By accessing or using the AMG NUTRA website, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website.
           </p>
         </section>
 
@@ -36,7 +36,7 @@ export default function TermsPage() {
         <section className="space-y-2">
           <h2 className="text-lg font-serif font-bold text-noventra-forest">3. Intellectual Property</h2>
           <p>
-            The NOVENTRA brand name, original logo, packaging design, custom product animations, and written copy are the proprietary intellectual property of NOVENTRA. Unauthorized reproduction or commercial use is strictly prohibited.
+            The AMG NUTRA brand name, original logo, packaging design, custom product animations, and written copy are the proprietary intellectual property of AMG NUTRA. Unauthorized reproduction or commercial use is strictly prohibited.
           </p>
         </section>
 

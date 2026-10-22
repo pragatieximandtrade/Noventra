@@ -31,7 +31,7 @@ export default function AmazonButton({
       whileHover={{ scale: 1.02, y: -1 }}
       whileTap={{ scale: 0.98 }}
       className={`inline-flex items-center justify-center rounded-full font-semibold tracking-wide transition-all duration-300 relative group overflow-hidden whitespace-nowrap select-none ${sizeClasses[size]} ${variantStyles[variant] || variantStyles.primary} ${className}`}
-      aria-label={`Shop ${productName || 'Noventra'} on Amazon`}
+      aria-label={`Shop ${productName || 'AMG Nutra'} on Amazon`}
     >
       {/* Subtle Shimmer effect */}
       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
